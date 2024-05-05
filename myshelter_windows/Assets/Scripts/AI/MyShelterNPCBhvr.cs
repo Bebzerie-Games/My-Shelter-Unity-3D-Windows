@@ -3,12 +3,33 @@ using UnityEngine;
 namespace MyShelterWin64.AI {
     public abstract class MyShelterNPCBhvr : MonoBehaviour {
 
+        public abstract NPC NPCSystem {
+            get;
+        }
+
+        public abstract AIState CurrentState {
+            get;
+        }
+
         public abstract AIStateMachine StateMachine {
             get;
         }
 
-        public virtual void OnStateMachine(AIState state, NPC npc) {
+        public void ExecuteStateMachine(NPC npc, AIState state) {
             state.OnStateEnter(npc);
+        }
+
+        private void Update() {
+            switch (StateMachine) {
+                case AIStateMachine.Idle:
+                    return; // do nothing
+
+                case AIStateMachine.Wander:
+                case AIStateMachine.AwareOfDanger:
+                case AIStateMachine.Attack:
+                    ExecuteStateMachine(NPCSystem, CurrentState);
+                    break;
+            }
         }
     }
 }

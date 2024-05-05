@@ -1,17 +1,31 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace MyShelterWin64.AI {
     public class NPC : MyShelterNPCBhvr {
 
+        public NavMeshAgent Agent;
+        [Space]
         [SerializeField] AIStateMachine _stateMachine = AIStateMachine.Idle;
         [SerializeField] GameObject _aiPannel;
+        [Space]
         [SerializeField] AIState[] _states;
+        [SerializeField] AIState _currentState;
+        [Space]
         [SerializeField] NPCScriptable _aiProfile;
-
+        
         public AIState[] AIStates => _states;
         public NPCScriptable AIProfile => _aiProfile;
 
         public override AIStateMachine StateMachine => _stateMachine;
+
+        public override NPC NPCSystem => this;
+
+        public override AIState CurrentState =>_currentState;
+
+        public bool MakeMoveAgentTo(Vector3 newPos) {
+            return Agent.SetDestination(newPos);
+        }
 
         public void Evaluate(string argument) {
             if (argument == "DoOpenAIPannel") {
@@ -20,13 +34,15 @@ namespace MyShelterWin64.AI {
             }
             
             if (argument == "DoIdle") {
-                SetStateMachine(GetIdleState());
-                return;
-            }
-
-            if (argument == "DoWander") {
-                SetStateMachine(GetWanderState());
-                return;
+                SetNewStateMachine(AIStateMachine.Idle);
+            } 
+            
+            else if (argument == "DoWander") {
+                SetNewStateMachine(AIStateMachine.Wander);
+            } 
+            
+            else {
+                SetStateMachine(CurrentState);
             }
         }
 
@@ -35,13 +51,20 @@ namespace MyShelterWin64.AI {
         public AIState GetAwareOfDangerState() => _states[2];
         public AIState GetAttackState() => _states[3];
 
+        public AIState GetAIStateByCurrentStateMachine() {
+            Debug.Log((int)_stateMachine);
+            return _states[(int)_stateMachine];
+        }
+
         public void SetNewStateMachine(AIStateMachine state) {
             _stateMachine = state;
+            _currentState = GetAIStateByCurrentStateMachine();
+
             Debug.unityLogger.MS_Print(typeof(NPC), $"{AIProfile.NPCName}     OK {nameof(SetNewStateMachine)} -> AIStateMachine.{nameof(state)}");
         }
 
         void SetStateMachine(AIState state) {
-            OnStateMachine(state, this);
+            ExecuteStateMachine(this, state);
         }
     }
 }

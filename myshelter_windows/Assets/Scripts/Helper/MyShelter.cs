@@ -9,7 +9,7 @@ namespace MyShelterWin64 {
     /// </summary>
     public static class MyShelter {
         public static void MS_Print(this ILogger logger, Type source, string message) {
-            Debug.Log($"[{source.Name}] {message}");
+            Debug.Log($"[{source.Name}] {message}");    
         }
 
         public static void MS_PrintWarning(this ILogger logger, Type source, string message) {
