@@ -13,7 +13,9 @@ namespace MyShelterWin64.AI {
         [SerializeField] AIState _currentState;
         [Space]
         [SerializeField] NPCScriptable _aiProfile;
-        
+        [Space]
+        public AIAnimationSystem AnimationSystem;
+
         public AIState[] AIStates => _states;
         public NPCScriptable AIProfile => _aiProfile;
 
@@ -23,8 +25,8 @@ namespace MyShelterWin64.AI {
 
         public override AIState CurrentState =>_currentState;
 
-        public bool MakeMoveAgentTo(Vector3 newPos) {
-            return Agent.SetDestination(newPos);
+        public void AgentSetDestination(Vector3 newPos) {
+            Agent.SetDestination(newPos);
         }
 
         public void Evaluate(string argument) {
@@ -57,6 +59,8 @@ namespace MyShelterWin64.AI {
         }
 
         public void SetNewStateMachine(AIStateMachine state) {
+            _currentState.OnStateExit(this);
+
             _stateMachine = state;
             _currentState = GetAIStateByCurrentStateMachine();
 

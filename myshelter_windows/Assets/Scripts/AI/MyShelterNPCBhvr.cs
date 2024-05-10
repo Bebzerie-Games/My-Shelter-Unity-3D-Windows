@@ -22,11 +22,15 @@ namespace MyShelterWin64.AI {
         private void Update() {
             switch (StateMachine) {
                 case AIStateMachine.Idle:
+                    NPCSystem.AnimationSystem.SetNoVelocity();
                     return; // do nothing
 
                 case AIStateMachine.Wander:
                 case AIStateMachine.AwareOfDanger:
                 case AIStateMachine.Attack:
+                    NPCSystem.AnimationSystem.PlayAnimation(isHorizontal: true, NPCSystem.Agent.velocity.z);
+                    NPCSystem.AnimationSystem.PlayAnimation(isHorizontal: false, NPCSystem.Agent.velocity.x);
+
                     ExecuteStateMachine(NPCSystem, CurrentState);
                     break;
             }

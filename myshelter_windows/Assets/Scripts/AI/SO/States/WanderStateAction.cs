@@ -14,13 +14,20 @@ namespace MyShelterWin64.AI {
         public override bool OnStateExecuting(NPC npc) {
 
             if (!npc.Agent.hasPath) {
-                npc.Agent.SetDestination(GetRandomPoint(npc, npc.Agent.transform, radius:20));
+                npc.AgentSetDestination(GetRandomPoint(npc, npc.Agent.transform, radius: 50));
             }
 
             return true;
         }
 
+        public void UpdateWander(NPC npc) {
+           if (npc.Agent.hasPath) {
+                npc.Agent.ResetPath();
+           }
+        }
+
         public override bool OnStateExit(NPC npc) {
+            UpdateWander(npc);
             return base.OnStateExit(npc);
         }
         
