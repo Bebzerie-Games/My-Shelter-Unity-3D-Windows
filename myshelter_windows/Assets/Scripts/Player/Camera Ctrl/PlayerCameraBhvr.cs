@@ -6,12 +6,9 @@ namespace MyShelterWin64.Player {
     /// MyShelter's player camera behaviour (movement, zoom, handling click callback receiver, ...)
     /// </summary>
     public class PlayerCameraBhvr : MonoBehaviour {
-        [Header("Camera Data :")]
-        [SerializeField] Camera _gameCamera;
-
         // click to drag feature
         Vector2 _lastMousePosition;
-        bool _dragPanMoveActive = false;
+        bool _dragPanMoveActive = true;
         // ---------------------
 
         readonly float _moveSpeed = 30f;
@@ -29,9 +26,9 @@ namespace MyShelterWin64.Player {
                 Input.GetAxis("Horizontal");
 
             if (useAccelerator)
-                transform.position += moveDir * Mathf.Lerp(_moveSpeed, _moveSpeed + 4, .25f) * Time.deltaTime;
+                transform.position += Mathf.Lerp(_moveSpeed, _moveSpeed + 4, .25f) * Time.deltaTime * moveDir;
             else {
-                transform.position += moveDir * _moveSpeed * Time.deltaTime;
+                transform.position += _moveSpeed * Time.deltaTime * moveDir;
             }
 
             // --------------------
@@ -80,8 +77,8 @@ namespace MyShelterWin64.Player {
             float scroll = Input.GetAxis("Mouse ScrollWheel");
 
             _fov -= scroll * 2;
-            _fov = Mathf.Clamp(_fov, 2, 8);
-            _gameCamera.orthographicSize = Mathf.SmoothDamp(_gameCamera.orthographicSize, _fov, ref _velocity, .25f);
+            _fov = Mathf.Clamp(_fov, 10, 15);
+            Camera.main.orthographicSize = Mathf.SmoothDamp(Camera.main.orthographicSize, _fov, ref _velocity, .25f);
         }
     }
 }

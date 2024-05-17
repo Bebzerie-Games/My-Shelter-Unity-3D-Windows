@@ -1,15 +1,49 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp.dll:
-    - MyShelterDebuggingTool
+    Assembly-CSharp:
+    - MyShelterWin64.AI.AIAnimationSystem
     - MyShelterWin64.AI.IdleStateAction
     - MyShelterWin64.AI.NPC
     - MyShelterWin64.AI.NPCScriptable
     - MyShelterWin64.AI.WanderStateAction
+    - MyShelterWin64.Building.GameBuilding
+    - MyShelterWin64.Building.GameBuildingManager
+    - MyShelterWin64.Building.GameBuildingSO
+    - MyShelterWin64.Economy.GameEconomyBhvr
+    - MyShelterWin64.Economy.GameEconomyGoldSO
+    - MyShelterWin64.Economy.GameEconomyVitalSO
+    - MyShelterWin64.Game.Building.BuildingPlacementCtrl
     - MyShelterWin64.Game.Entity
+    - MyShelterWin64.Game.EntitySO
+    - MyShelterWin64.Game.GameEntityDatabaseSO
+    - MyShelterWin64.Game.GameEntityManager
     - MyShelterWin64.Game.Manager.GameManager
     - MyShelterWin64.Player.PlayerCameraBhvr
     - MyShelterWin64.Player.PlayerInputBhvr
+    - MyShelterWin64.RuntimeDebugging.MyShelterDebuggingTool
+    - PlayerHUDCtrl
+    Assembly-CSharp.dll:
+    - MyShelterWin64.AI.AIAnimationSystem
+    - MyShelterWin64.AI.IdleStateAction
+    - MyShelterWin64.AI.NPC
+    - MyShelterWin64.AI.NPCScriptable
+    - MyShelterWin64.AI.WanderStateAction
+    - MyShelterWin64.Building.GameBuilding
+    - MyShelterWin64.Building.GameBuildingManager
+    - MyShelterWin64.Building.GameBuildingSO
+    - MyShelterWin64.Economy.GameEconomyBhvr
+    - MyShelterWin64.Economy.GameEconomyGoldSO
+    - MyShelterWin64.Economy.GameEconomyVitalSO
+    - MyShelterWin64.Game.Building.BuildingPlacementCtrl
+    - MyShelterWin64.Game.Entity
+    - MyShelterWin64.Game.EntitySO
+    - MyShelterWin64.Game.GameEntityDatabaseSO
+    - MyShelterWin64.Game.GameEntityManager
+    - MyShelterWin64.Game.Manager.GameManager
+    - MyShelterWin64.Player.PlayerCameraBhvr
+    - MyShelterWin64.Player.PlayerInputBhvr
+    - MyShelterWin64.RuntimeDebugging.MyShelterDebuggingTool
+    - PlayerHUDCtrl
     Unity.AI.Navigation.Editor.dll:
     - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
@@ -60,9 +94,19 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -112,7 +156,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
-    - UnityEngine.Events.UnityEvent`1[System.String]
     - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
@@ -134,17 +177,65 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
+    fullTypeName: MyShelterWin64.Game.Building.BuildingPlacementCtrl
+    methodName: StartPlacementOfObject
   - assembly: Assembly-CSharp
     fullTypeName: MyShelterWin64.AI.NPC
     methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MyShelterWin64.AI.NPC
     methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MyShelterWin64.AI.NPC
     methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.Game.Building.BuildingPlacementCtrl
+    methodName: StartPlacementOfObject
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -211,18 +302,22 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 16650}
-    - Class: 114
-      Script: {instanceID: 16652}
     - Class: 114
       Script: {instanceID: 16654}
     - Class: 114
@@ -230,130 +325,164 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16658}
     - Class: 114
-      Script: {instanceID: 16670}
+      Script: {instanceID: 16660}
     - Class: 114
-      Script: {instanceID: 16740}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 16818}
+      Script: {instanceID: 16674}
     - Class: 114
-      Script: {instanceID: 16900}
+      Script: {instanceID: 16716}
     - Class: 114
-      Script: {instanceID: 16912}
+      Script: {instanceID: 16754}
     - Class: 114
-      Script: {instanceID: 17010}
+      Script: {instanceID: 16760}
     - Class: 114
-      Script: {instanceID: 17036}
+      Script: {instanceID: 16828}
     - Class: 114
-      Script: {instanceID: 17120}
+      Script: {instanceID: 16914}
     - Class: 114
-      Script: {instanceID: 17126}
+      Script: {instanceID: 16926}
     - Class: 114
-      Script: {instanceID: 17274}
+      Script: {instanceID: 17028}
     - Class: 114
-      Script: {instanceID: 17340}
+      Script: {instanceID: 17056}
     - Class: 114
-      Script: {instanceID: 17440}
+      Script: {instanceID: 17140}
     - Class: 114
-      Script: {instanceID: 17456}
+      Script: {instanceID: 17146}
     - Class: 114
-      Script: {instanceID: 17458}
+      Script: {instanceID: 17318}
+    - Class: 114
+      Script: {instanceID: 17370}
+    - Class: 114
+      Script: {instanceID: 17470}
     - Class: 114
       Script: {instanceID: 17482}
     - Class: 114
-      Script: {instanceID: 17546}
+      Script: {instanceID: 17500}
     - Class: 114
-      Script: {instanceID: 17636}
+      Script: {instanceID: 17502}
     - Class: 114
-      Script: {instanceID: 17752}
+      Script: {instanceID: 17526}
     - Class: 114
-      Script: {instanceID: 17848}
+      Script: {instanceID: 17594}
     - Class: 114
-      Script: {instanceID: 17884}
+      Script: {instanceID: 17684}
     - Class: 114
-      Script: {instanceID: 18196}
+      Script: {instanceID: 17804}
     - Class: 114
-      Script: {instanceID: 18258}
+      Script: {instanceID: 17902}
     - Class: 114
-      Script: {instanceID: 18266}
+      Script: {instanceID: 17938}
     - Class: 114
-      Script: {instanceID: 18352}
+      Script: {instanceID: 17944}
     - Class: 114
-      Script: {instanceID: 18376}
+      Script: {instanceID: 18256}
     - Class: 114
-      Script: {instanceID: 18382}
+      Script: {instanceID: 18318}
     - Class: 114
-      Script: {instanceID: 18478}
+      Script: {instanceID: 18326}
     - Class: 114
-      Script: {instanceID: 18510}
+      Script: {instanceID: 18354}
     - Class: 114
-      Script: {instanceID: 18556}
+      Script: {instanceID: 18378}
     - Class: 114
-      Script: {instanceID: 18624}
+      Script: {instanceID: 18418}
     - Class: 114
-      Script: {instanceID: 18686}
+      Script: {instanceID: 18442}
     - Class: 114
-      Script: {instanceID: 18802}
+      Script: {instanceID: 18448}
     - Class: 114
-      Script: {instanceID: 18804}
+      Script: {instanceID: 18542}
     - Class: 114
-      Script: {instanceID: 18942}
+      Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 19108}
+      Script: {instanceID: 18582}
     - Class: 114
-      Script: {instanceID: 19148}
+      Script: {instanceID: 18628}
     - Class: 114
-      Script: {instanceID: 19248}
+      Script: {instanceID: 18644}
     - Class: 114
-      Script: {instanceID: 19252}
+      Script: {instanceID: 18698}
     - Class: 114
-      Script: {instanceID: 19294}
+      Script: {instanceID: 18724}
     - Class: 114
-      Script: {instanceID: 19320}
+      Script: {instanceID: 18764}
     - Class: 114
-      Script: {instanceID: 19436}
+      Script: {instanceID: 18882}
     - Class: 114
-      Script: {instanceID: 19502}
+      Script: {instanceID: 18884}
     - Class: 114
-      Script: {instanceID: 19586}
+      Script: {instanceID: 19026}
     - Class: 114
-      Script: {instanceID: 19714}
+      Script: {instanceID: 19196}
     - Class: 114
-      Script: {instanceID: 19984}
+      Script: {instanceID: 19238}
     - Class: 114
-      Script: {instanceID: 20158}
+      Script: {instanceID: 19340}
     - Class: 114
-      Script: {instanceID: 20336}
+      Script: {instanceID: 19344}
     - Class: 114
-      Script: {instanceID: 20372}
+      Script: {instanceID: 19388}
     - Class: 114
-      Script: {instanceID: 20586}
+      Script: {instanceID: 19390}
     - Class: 114
-      Script: {instanceID: 20628}
+      Script: {instanceID: 19416}
     - Class: 114
-      Script: {instanceID: 20680}
+      Script: {instanceID: 19534}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 19600}
     - Class: 114
-      Script: {instanceID: 21012}
+      Script: {instanceID: 19684}
     - Class: 114
-      Script: {instanceID: 21016}
+      Script: {instanceID: 19812}
     - Class: 114
-      Script: {instanceID: 21174}
+      Script: {instanceID: 20088}
     - Class: 114
-      Script: {instanceID: 21238}
+      Script: {instanceID: 20266}
     - Class: 114
-      Script: {instanceID: 21446}
+      Script: {instanceID: 20450}
     - Class: 114
-      Script: {instanceID: 27210}
+      Script: {instanceID: 20486}
+    - Class: 114
+      Script: {instanceID: 20702}
+    - Class: 114
+      Script: {instanceID: 20746}
+    - Class: 114
+      Script: {instanceID: 20798}
+    - Class: 114
+      Script: {instanceID: 20852}
+    - Class: 114
+      Script: {instanceID: 20944}
+    - Class: 114
+      Script: {instanceID: 21136}
+    - Class: 114
+      Script: {instanceID: 21140}
+    - Class: 114
+      Script: {instanceID: 21264}
+    - Class: 114
+      Script: {instanceID: 21272}
+    - Class: 114
+      Script: {instanceID: 21302}
+    - Class: 114
+      Script: {instanceID: 21366}
+    - Class: 114
+      Script: {instanceID: 21582}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 208
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -365,6 +494,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -372,6 +503,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 540882762544409cc4530e60db00e951
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: b5007673bbbdb9d12597a1d8201370f5
@@ -384,12 +521,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Button
-  - hash:
-      serializedVersion: 2
-      Hash: 540882762544409cc4530e60db00e951
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: d5cd7f207e91ca8336c65a577a6fb2a0
@@ -416,6 +547,12 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
+      Hash: c02107a673086de399625d02972534c3
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Economy
+    className: GameEconomyBhvr
+  - hash:
+      serializedVersion: 2
       Hash: 51b80d3734ea86b38e3101db98029e15
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -432,6 +569,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5483ce6fbbf7c9c8b303273db15d14a4
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.AI
+    className: AIAnimationSystem
   - hash:
       serializedVersion: 2
       Hash: 8d7ab1303b1c14da5fdd62bf96ca6e89
@@ -524,6 +667,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectToggle
   - hash:
       serializedVersion: 2
+      Hash: 061a5d77ce0aa52a60c21c566c6d8af2
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshModifierVolume
+  - hash:
+      serializedVersion: 2
       Hash: 075aadccd467c1c21c2b12367cdf5dc4
     assemblyName: OccaSoftware.SuperSimpleSkybox.Runtime
     namespaceName: OccaSoftware.SuperSimpleSkybox.Runtime
@@ -542,7 +691,7 @@ ScriptsOnlyBuild:
     className: AdaptivePerformanceManagerSpawner
   - hash:
       serializedVersion: 2
-      Hash: ff2c955ebbf5839fa0626277dd2b94df
+      Hash: 71f60f2c9fe8ea29ce479d2e176e9d10
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.Player
     className: PlayerInputBhvr
@@ -570,6 +719,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: d55992199bd2f5a5502658391cdf8ba7
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshSurface
   - hash:
       serializedVersion: 2
       Hash: 6b2b20d5352b9f1294595326f54bd3c2
@@ -620,6 +775,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerMessageBox
   - hash:
       serializedVersion: 2
+      Hash: 82dd5c75d250bdb3376da2cbccb148cc
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Economy
+    className: GameEconomyObject
+  - hash:
+      serializedVersion: 2
       Hash: 158ea04b653ef20da50f27da42170155
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
@@ -660,6 +821,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerGroup
+  - hash:
+      serializedVersion: 2
+      Hash: be57a41df5cbebb8d9a5af0e74d7a9a3
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Building
+    className: GameBuilding
   - hash:
       serializedVersion: 2
       Hash: 37dbaff32a49c70ff37b8bb15bd24c18
@@ -722,6 +889,18 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 033b37d5de27830562bf7700f9e0ba92
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Building
+    className: GameBuildingSO
+  - hash:
+      serializedVersion: 2
+      Hash: 864e429bd5f0b7e5b38078e18cbbe800
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Manager
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 2541c03d117382d4ebbe0bb0775dd2dc
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -762,6 +941,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 19af3939a34fa032f59d90576cdb065a
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Economy
+    className: GameEconomyVitalSO
   - hash:
       serializedVersion: 2
       Hash: 5a4aa2850fe11587f47e34c270c7fd22
@@ -812,6 +997,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 2d4a29994a5c21a4545d7a7906d29d8c
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game
+    className: GameEntityDatabaseSO
+  - hash:
+      serializedVersion: 2
       Hash: 07f6b7f433c8738108c47c5dd5c7c7cd
     assemblyName: Unity.AdaptivePerformance
     namespaceName: UnityEngine.AdaptivePerformance
@@ -828,6 +1019,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerIndirectFloatField
+  - hash:
+      serializedVersion: 2
+      Hash: bfe3e45858038efa7936eba603e9049e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerHUDCtrl
   - hash:
       serializedVersion: 2
       Hash: cb49ce80d4b69cb2ed30d83bfcb146ae
@@ -864,6 +1061,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 68f2cb287af2eee1f639824485a3402b
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshModifier
   - hash:
       serializedVersion: 2
       Hash: 672716ae97f6ddb615fa5ac3ec9da349
@@ -954,6 +1157,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 8655cbbf7c8eedb02ec03c4e9a13d9de
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Economy
+    className: GameEconomyGoldSO
   - hash:
       serializedVersion: 2
       Hash: 4392bfff79efe0630144f16ea4d656ab
@@ -1202,7 +1411,7 @@ ScriptsOnlyBuild:
     className: AdaptivePerformanceManagerSettings
   - hash:
       serializedVersion: 2
-      Hash: 67e2c366e3ae44c72cfcb0e39489c67a
+      Hash: c7ab73c61dc67bc4475fb0ba53055133
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.Player
     className: PlayerCameraBhvr
@@ -1226,7 +1435,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerButton
   - hash:
       serializedVersion: 2
-      Hash: 14f39fce4d602081fe4e03247c9c250c
+      Hash: 6f16749f5e54c509f5467810d449764c
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.Game
     className: Entity
@@ -1242,6 +1451,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 86fccac03a52493443c21b496b1bd0e2
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game
+    className: GameEntityManager
   - hash:
       serializedVersion: 2
       Hash: 9126d0be22d964159df51d6d53b879a9
@@ -1274,16 +1489,28 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
-      Hash: 97c85155fa3200db2b2415afa8d769f2
+      Hash: b9d268aaeef3f307a570d4cf3aedaee5
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.AI
     className: NPC
+  - hash:
+      serializedVersion: 2
+      Hash: 85364183c045f8a7724b3d150fe20423
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game
+    className: EntitySO
   - hash:
       serializedVersion: 2
       Hash: 0e5191692cec4715464220e0a7d38ca7
     assemblyName: OccaSoftware.SuperSimpleSkybox.Runtime
     namespaceName: OccaSoftware.SuperSimpleSkybox.Runtime
     className: SetStarRotation
+  - hash:
+      serializedVersion: 2
+      Hash: 6dedfc8958c71722aeea68b51a489326
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Building
+    className: GameBuildingManager
   - hash:
       serializedVersion: 2
       Hash: 31756ced3e1a65bd249fcd6575ae2768
@@ -1298,9 +1525,9 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 8afaed3c4decda693cff09d3fd8d0954
+      Hash: 0ed3d33924e337172c08d1b127cadd70
     assemblyName: Assembly-CSharp
-    namespaceName: 
+    namespaceName: MyShelterWin64.RuntimeDebugging
     className: MyShelterDebuggingTool
   - hash:
       serializedVersion: 2
@@ -1322,36 +1549,18 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 89dc53a4436d3dd94203c87ef0731bca
-    assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Game.Manager
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: 061a5d77ce0aa52a60c21c566c6d8af2
-    assemblyName: Unity.AI.Navigation
-    namespaceName: Unity.AI.Navigation
-    className: NavMeshModifierVolume
-  - hash:
-      serializedVersion: 2
-      Hash: d55992199bd2f5a5502658391cdf8ba7
-    assemblyName: Unity.AI.Navigation
-    namespaceName: Unity.AI.Navigation
-    className: NavMeshSurface
-  - hash:
-      serializedVersion: 2
-      Hash: 68f2cb287af2eee1f639824485a3402b
-    assemblyName: Unity.AI.Navigation
-    namespaceName: Unity.AI.Navigation
-    className: NavMeshModifier
-  - hash:
-      serializedVersion: 2
       Hash: 8a2f78c25d5e92eb97ee5544a162a2e9
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
     className: NavMeshLink
+  - hash:
+      serializedVersion: 2
+      Hash: f9fe9d7c604e28dd247e77b3c40e9e3b
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Building
+    className: BuildingPlacementCtrl
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/05_05_24/testbed_build_test_npcstatemachine1/My
+  playerPath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_buildingsystem/My
     Shelter Beta.exe

@@ -36,32 +36,8 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 98ddef338e872ea4c8f247bcd5247a23, type: 3}
-    m_Threshold: 0.2
+    m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Blend
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 893492c82f942ab4e87fc67eec098643, type: 3}
-    m_Threshold: 0.4
-    m_Position: {x: 1.918392, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Blend
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 59134f7a1fc54b54587a82fd10e567c4, type: 3}
-    m_Threshold: 0.6
-    m_Position: {x: -1.9221045, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Blend
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: eeabe133b2f021c4c8c145605ca37880, type: 3}
-    m_Threshold: 0.8
-    m_Position: {x: 0, y: -1.9202484}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -69,18 +45,18 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: b1951e8b17a834a46b2ddc9785879328, type: 3}
     m_Threshold: 1
-    m_Position: {x: 0, y: 1.920304}
+    m_Position: {x: 0, y: 2}
     m_TimeScale: 1
-    m_CycleOffset: 0
+    m_CycleOffset: 0.5
     m_DirectBlendParameter: Blend
-    m_Mirror: 0
-  m_BlendParameter: Vertical
+    m_Mirror: 1
+  m_BlendParameter: Walk Speed
   m_BlendParameterY: Horizontal
-  m_MinThreshold: 0.2
+  m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
-  m_BlendType: 2
+  m_BlendType: 0
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -90,13 +66,7 @@ AnimatorController:
   m_Name: Survivor NPC Male
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Horizontal
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Vertical
+  - m_Name: Walk Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0

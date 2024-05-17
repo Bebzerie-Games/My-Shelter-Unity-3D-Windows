@@ -1,4 +1,9 @@
+using MyShelterWin64.Building;
+using MyShelterWin64.Economy;
+using MyShelterWin64.Game.Building;
 using MyShelterWin64.Player;
+using MyShelterWin64.RuntimeDebugging;
+using System;
 using UnityEngine;
 
 namespace MyShelterWin64.Game.Manager {
@@ -9,11 +14,25 @@ namespace MyShelterWin64.Game.Manager {
 
         [Header("Debugging Unit :")]
         [SerializeField] GameObject _debuggingUnitGO;
+        public MyShelterDebuggingTool DebuggingTools;
 
-        // TODO : Faire le système d'habitation par classe des ia
+        [Header("HUD :")]
+        public PlayerHUDCtrl PlayerHUDCtrl;
+
+        [Header("Economy :")]
+        public GameEconomyBhvr GameEconomy;
+
+        [Header("Building :")]
+        public BuildingPlacementCtrl BuildingPlacement;
+        public GameBuildingManager BuildingManager;
+
+        [Header("Entity :")]
+        public GameEntityManager EntityManager;
+
+        // TODO : Faire le système de construction de maison avec pooling
         // TODO : Faire le système d'économie avec XP
+        // TODO : Faire le système d'habitation par classe des ia
         // TODO : Faire le sys. de dialogue entre ia (sys. d'événement aléatoire)
-        // TODO : Utiliser un vrai modèle 3d des ia au lieu du placeholder cube
 
         public string GameVersion {
             get; set;
@@ -25,9 +44,16 @@ namespace MyShelterWin64.Game.Manager {
         string GetBuildVersion() => Application.version;
         string GetUnityVersion() => Application.unityVersion;
         string FormatGameVersion() => $"MyShelter v{GetBuildVersion()}\t\t{GetUnityVersion()}";
-        
+
+        public readonly static Action<Type, string> MS_PRINT = Debug.unityLogger.MS_Print;
+        public readonly static Action<Type, string> MS_PRINT_WRN = Debug.unityLogger.MS_PrintWarning;
+        public readonly static Action<Type, string> MS_PRINT_ERR = Debug.unityLogger.MS_PrintError;
+
         private void OnEnable() {
-            _debuggingUnitGO.SetActive(Debug.isDebugBuild);
+#if MS_DEBUGGING_ONLY
+            _debuggingUnitGO.SetActive(true);
+            MS_PRINT(typeof(GameManager), "Debugging is active for this build");
+#endif
         }
 
         private void Awake() {
@@ -35,19 +61,9 @@ namespace MyShelterWin64.Game.Manager {
             DontDestroyOnLoad(Instance);
             GameVersion = FormatGameVersion();
 
-#if UNITY_EDITOR
-            Debug.unityLogger.MS_Print(typeof(GameManager), GameVersion);
+#if DEBUG
+            MS_PRINT(typeof(GameManager), GameVersion);
 #endif
         }
-
-#if UNITY_EDITOR
-        [ContextMenu("My Shelter/Setup Scene")]
-        void SetupScene() {
-            if (CameraBhvr == null) {
-                Debug.unityLogger.MS_PrintError(typeof(GameManager), $"ref. null CameraBhvr");
-            } else
-                UnityEditor.EditorGUIUtility.PingObject(CameraBhvr);
-        }
-#endif
     }
 }

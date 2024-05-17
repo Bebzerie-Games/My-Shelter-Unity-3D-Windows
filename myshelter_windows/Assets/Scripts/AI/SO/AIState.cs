@@ -6,7 +6,7 @@ namespace MyShelterWin64.AI {
     /// 0 = IDLE
     /// 1 = WANDER
     /// </summary>
-    public partial class AIState : ScriptableObject {
+    public partial class AIState : ScriptableObject, IAIState {
 
         public delegate void WhenStateBegin(NPC npc);
         public event WhenStateBegin OnStateBegan;

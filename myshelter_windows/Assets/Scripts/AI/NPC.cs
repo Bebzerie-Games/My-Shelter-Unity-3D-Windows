@@ -1,3 +1,4 @@
+using MyShelterWin64.Game.Manager;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -25,8 +26,8 @@ namespace MyShelterWin64.AI {
 
         public override AIState CurrentState =>_currentState;
 
-        public void AgentSetDestination(Vector3 newPos) {
-            Agent.SetDestination(newPos);
+        public bool AgentSetDestination(Vector3 newPos) {
+            return Agent.SetDestination(newPos);
         }
 
         public void Evaluate(string argument) {
@@ -48,10 +49,10 @@ namespace MyShelterWin64.AI {
             }
         }
 
-        public AIState GetIdleState() => _states[0];
-        public AIState GetWanderState() => _states[1];
-        public AIState GetAwareOfDangerState() => _states[2];
-        public AIState GetAttackState() => _states[3];
+        public IAIState GetIdleState() => _states[0];
+        public IAIState GetWanderState() => _states[1];
+        public IAIState GetAwareOfDangerState() => _states[2];
+        public IAIState GetAttackState() => _states[3];
 
         public AIState GetAIStateByCurrentStateMachine() {
             Debug.Log((int)_stateMachine);
@@ -64,10 +65,12 @@ namespace MyShelterWin64.AI {
             _stateMachine = state;
             _currentState = GetAIStateByCurrentStateMachine();
 
-            Debug.unityLogger.MS_Print(typeof(NPC), $"{AIProfile.NPCName}     OK {nameof(SetNewStateMachine)} -> AIStateMachine.{nameof(state)}");
+#if DEBUG
+            GameManager.MS_PRINT(typeof(NPC), $"{AIProfile.NPCName}     OK {nameof(SetNewStateMachine)} -> AIStateMachine.{nameof(state)}");
+#endif
         }
 
-        void SetStateMachine(AIState state) {
+        void SetStateMachine(IAIState state) {
             ExecuteStateMachine(this, state);
         }
     }

@@ -19,9 +19,11 @@ namespace MyShelterWin64 {
         public static void MS_PrintError(this ILogger logger, Type source, string message) {
             Debug.LogError($"[{source.Name}] {message}");
         }
-
+        
+        /*
+         * TODO : Implementer ceci lorsque le système de dialogue sera commencé
         public static string GetNPCName(this NPCScriptable npcProfile, NPC npc) {
             return npc.AIProfile.NPCName;
-        }
+        }*/
     }
 }

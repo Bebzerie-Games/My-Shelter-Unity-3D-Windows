@@ -15,7 +15,7 @@ namespace MyShelterWin64.AI {
             get;
         }
 
-        public void ExecuteStateMachine(NPC npc, AIState state) {
+        public void ExecuteStateMachine(NPC npc, IAIState state) {
             state.OnStateEnter(npc);
         }
 
@@ -28,9 +28,14 @@ namespace MyShelterWin64.AI {
                 case AIStateMachine.Wander:
                 case AIStateMachine.AwareOfDanger:
                 case AIStateMachine.Attack:
-                    NPCSystem.AnimationSystem.PlayAnimation(isHorizontal: true, NPCSystem.Agent.velocity.z);
-                    NPCSystem.AnimationSystem.PlayAnimation(isHorizontal: false, NPCSystem.Agent.velocity.x);
 
+
+                    // ANIMATION
+                    // we're using normalized vector because my ai got suddenly slow when going backward, this is the only fix i know atm
+
+                    NPCSystem.AnimationSystem.PlayAnimation(NPCSystem.Agent.velocity.magnitude);
+
+                    // ---------
                     ExecuteStateMachine(NPCSystem, CurrentState);
                     break;
             }

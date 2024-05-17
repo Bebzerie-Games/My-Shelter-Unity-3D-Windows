@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271ffeba4e0180a4e8c23dbcb364ba71, type: 3}
+  m_Name: Classic Shop Blue
+  m_EditorClassIdentifier: 
+  Name: Classic Shop Blue
+  GenerationPerDelay: 1
+  Delay: 712
+  CellsDimension: {x: 7, y: 7}
+  EntitySO: {fileID: 11400000, guid: b5a8e4577f0229c40a5df0b8bc81fd1a, type: 2}
+  EconomyGenerationType: 2
