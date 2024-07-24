@@ -1,7 +1,8 @@
-using UnityEngine;
-
-namespace MyShelterWin64.AI {
-    public abstract class MyShelterNPCBhvr : MonoBehaviour {
+namespace MyShelterWin64.Game.AI {
+    /// <summary>
+    /// NPC's state machine where the state are involved
+    /// </summary>
+    public abstract class MyShelterNPCBhvr : Entity {
 
         public abstract NPC NPCSystem {
             get;
@@ -19,6 +20,16 @@ namespace MyShelterWin64.AI {
             state.OnStateEnter(npc);
         }
 
+        private void OnEnable() {
+            OnInteractionEnter += () => {
+                GetNPCCallbacks().SetActive(!GetNPCCallbacks().activeSelf);
+            };
+
+            OnEntitySpawn += () => {
+                NPCSystem.Evaluate(CurrentState.name);
+            };
+        }
+
         private void Update() {
             switch (StateMachine) {
                 case AIStateMachine.Idle:
@@ -28,14 +39,8 @@ namespace MyShelterWin64.AI {
                 case AIStateMachine.Wander:
                 case AIStateMachine.AwareOfDanger:
                 case AIStateMachine.Attack:
-
-
-                    // ANIMATION
-                    // we're using normalized vector because my ai got suddenly slow when going backward, this is the only fix i know atm
-
                     NPCSystem.AnimationSystem.PlayAnimation(NPCSystem.Agent.velocity.magnitude);
 
-                    // ---------
                     ExecuteStateMachine(NPCSystem, CurrentState);
                     break;
             }

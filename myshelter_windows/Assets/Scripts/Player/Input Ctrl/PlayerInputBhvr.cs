@@ -4,12 +4,13 @@ using UnityEngine;
 using System;
 using UnityEngine.EventSystems;
 using MyShelterWin64.Game.Building;
+using MyShelterWin64.Game.AI;
 
-namespace MyShelterWin64.Player {
+namespace MyShelterWin64.Game.Player {
     /// <summary>
     /// This script is handling the PlayerCameraBhvr input interaction
     /// </summary>
-    public class PlayerInputBhvr : MonoBehaviour {
+    public sealed class PlayerInputBhvr : MonoBehaviour {
 
         [SerializeField] LayerMask _placementLayer;
         [SerializeField] bool _isMouseVisible;
@@ -49,29 +50,27 @@ namespace MyShelterWin64.Player {
 
                 OnClicked?.Invoke();
 
-                if (!BuildingPlacementCtrl.IsInBuilderMod && Physics.Raycast(ray, out RaycastHit hit, 100)) {
-                    switch (hit.transform.tag) {
-                        case "Survivor NPC":
-                            SetMouse(true);
-                            PlayerHUDCtrl.DoOpenAIPannel(hit.transform.GetComponent<Entity>());
-                            break;
+                if (!BuildingPlacementCtrl.IsInBuilderMod) {
+                    if (Physics.Raycast(ray, out RaycastHit hit, 100)) {
+                        GameObject entityGO = hit.transform.gameObject;
 
-                        case "Infected NPC":
-                            break;
+                        switch (hit.transform.tag) {
+                            case "Survivor NPC":
+                                Entity entity = GameManager.Instance.GamePoolManager.GetPool().SpawnedEntity[entityGO];
 
-                        case "Building":
-                            SetMouse(true);
-#if DEBUG
-                            GameManager.MS_PRINT(typeof(PlayerInputBhvr), $"clicked\t-> {hit.transform.tag}");
-                            hit.transform.GetComponent<Entity>().DoInteractionEnter();
+                                SetMouse(true);
+                                GameHUDCtrl.DoOpenAIPannel(entity);
+                                break;
+
+                            case "Infected NPC":
+                                break;
+
+                            case "Collectable":
+#if MS_DEBUGGING_ONLY
+                                GameManager.MS_PRINT(typeof(PlayerInputBhvr), $"clicked\t-> {hit.transform.tag}");
 #endif
-                            break;
-
-                        case "Collectable":
-#if DEBUG
-                            GameManager.MS_PRINT(typeof(PlayerInputBhvr), $"clicked\t-> {hit.transform.tag}");
-#endif
-                            break;
+                                break;
+                        }
                     }
                 }
             }

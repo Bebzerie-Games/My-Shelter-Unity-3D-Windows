@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace MyShelterWin64.Economy {
+namespace MyShelterWin64.Game.Economy {
     [CreateAssetMenu(menuName = "My Shelter/Economy/New Economy Gold")]
-    public class GameEconomyGoldSO : ScriptableObject
+    public sealed class GameEconomyGoldSO : ScriptableObject
     {
         public string Name;
         public string Description;

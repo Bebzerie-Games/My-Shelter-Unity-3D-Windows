@@ -1,54 +1,43 @@
-using MyShelterWin64.AI;
-using MyShelterWin64.Economy;
+using MyShelterWin64.Game.Economy;
 using MyShelterWin64.Game.Manager;
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace MyShelterWin64.Game {
-    public class Entity : MonoBehaviour {
-        public EntitySO EntitySO;
 
-        event Action OnInteractionEnter;
-        event Action OnInteractionExit;
-        event Action OnSpawn;
+    public abstract class Entity : MonoBehaviour, IEntity {
+        [SerializeField] EntitySO _entitySO;
 
-        [Header("Economy Entity :")]
-        public GameEconomyObject EconomyObject = null;
+        public EntitySO EntitySO => _entitySO;
 
-        [Header("AI Entity :")]
+        public abstract event Action OnInteractionEnter;
+        public abstract event Action OnInteractionExit;
+        public abstract event Action OnEntitySpawn;
+
+        [Header("AI Entity Only :")]
         [SerializeField] GameObject _npcCallbacks;
 
-        private void OnEnable() {
-            if (EntitySO.Type == EntityType.Building)
-                OnInteractionEnter = () => {
-                    // increase economy based on the generated economy value per delay
-                    GameManager.Instance.GameEconomy.SynchronizeObjectValuesWithStats(EconomyObject);
-                    GameManager.Instance.PlayerHUDCtrl.UpdateGoldValueText();
-                };
-            else if (EntitySO.Type == EntityType.AI) {
-                OnInteractionEnter = () => {
-                    _npcCallbacks.SetActive(!_npcCallbacks.activeSelf);
-                };
-            }
-
-            OnInteractionExit = () => { };
-
-            OnSpawn = () => {
-                GameManager.Instance.BuildingPlacement.RegisterNewBuilding();
-            };
+        // TODO : refacto le code et utiliser la fonction Get() de la class en priorité sur l'accès des data du entity
+        public Entity Get() {
+            return this;
         }
 
-        public void DoInteractionExit() {
-            OnInteractionExit.Invoke();
+        public override string ToString() {
+            return EntitySO.EntityName;
         }
 
-        public void DoInteractionEnter() {
-            OnInteractionEnter.Invoke();
+        public GameObject GetNPCCallbacks() {
+            return _npcCallbacks;
         }
+
+        public abstract void OnSpawn();
+
+        public abstract void DoInteractionEnter();
+
+        public abstract void DoInteractionExit();
 
         public void DoSpawn() {
-            OnSpawn.Invoke();
+            throw new NotImplementedException();
         }
     }
 }

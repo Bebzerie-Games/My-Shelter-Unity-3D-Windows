@@ -383,7 +383,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 16415,
+      "PayloadLength": 16414,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -479,17 +479,17 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Core.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.dll",
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AdaptivePerformance.dll",
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Test.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/OccaSoftware.SuperSimpleSkybox.Runtime.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/OccaSoftware.SuperSimpleSkybox.Demo.dll",
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.Profiling.Core.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.27f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
@@ -1403,6 +1403,18 @@
       "DebugActionIndex": 84
     },
     {
+      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Core.dll",
+      "DisplayName": "Copying NaughtyAttributes.Core.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Core.dll"
+      ],
+      "Outputs": [
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Core.dll"
+      ],
+      "DebugActionIndex": 85
+    },
+    {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
       "DisplayName": "Copying Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll",
       "ActionType": "CopyFiles",
@@ -1412,7 +1424,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 86
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll",
@@ -1424,7 +1436,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll"
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AI.Navigation.dll",
@@ -1436,19 +1448,19 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AI.Navigation.dll"
       ],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 88
     },
     {
-      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AdaptivePerformance.dll",
-      "DisplayName": "Copying Unity.AdaptivePerformance.dll",
+      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Test.dll",
+      "DisplayName": "Copying NaughtyAttributes.Test.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AdaptivePerformance.dll"
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Test.dll"
       ],
       "Outputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AdaptivePerformance.dll"
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Test.dll"
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Runtime.dll",
@@ -1460,7 +1472,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Runtime.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/UnityEngine.UI.dll",
@@ -1472,7 +1484,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/UnityEngine.UI.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Timeline.dll",
@@ -1484,7 +1496,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll",
@@ -1496,7 +1508,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.TextMeshPro.dll",
@@ -1508,7 +1520,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Demo.dll",
@@ -1519,18 +1531,6 @@
       ],
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Demo.dll"
-      ],
-      "DebugActionIndex": 94
-    },
-    {
-      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Profiling.Core.dll",
-      "DisplayName": "Copying Unity.Profiling.Core.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.Profiling.Core.dll"
-      ],
-      "Outputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Profiling.Core.dll"
       ],
       "DebugActionIndex": 95
     },
@@ -2615,6 +2615,18 @@
       "DebugActionIndex": 185
     },
     {
+      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Core.pdb",
+      "DisplayName": "Copying NaughtyAttributes.Core.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Core.pdb"
+      ],
+      "Outputs": [
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Core.pdb"
+      ],
+      "DebugActionIndex": 186
+    },
+    {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb",
       "DisplayName": "Copying Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb",
       "ActionType": "CopyFiles",
@@ -2624,7 +2636,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb"
       ],
-      "DebugActionIndex": 186
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.Runtime.pdb",
@@ -2636,7 +2648,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.Runtime.pdb"
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AI.Navigation.pdb",
@@ -2648,19 +2660,19 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AI.Navigation.pdb"
       ],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 189
     },
     {
-      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AdaptivePerformance.pdb",
-      "DisplayName": "Copying Unity.AdaptivePerformance.pdb",
+      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Test.pdb",
+      "DisplayName": "Copying NaughtyAttributes.Test.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AdaptivePerformance.pdb"
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Test.pdb"
       ],
       "Outputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.AdaptivePerformance.pdb"
+        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/NaughtyAttributes.Test.pdb"
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Runtime.pdb",
@@ -2672,7 +2684,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Runtime.pdb"
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/UnityEngine.UI.pdb",
@@ -2684,7 +2696,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/UnityEngine.UI.pdb"
       ],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Timeline.pdb",
@@ -2696,7 +2708,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Timeline.pdb"
       ],
-      "DebugActionIndex": 192
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.pdb",
@@ -2708,7 +2720,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.pdb"
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.TextMeshPro.pdb",
@@ -2720,7 +2732,7 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.TextMeshPro.pdb"
       ],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Demo.pdb",
@@ -2732,25 +2744,13 @@
       "Outputs": [
         "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/OccaSoftware.SuperSimpleSkybox.Demo.pdb"
       ],
-      "DebugActionIndex": 195
-    },
-    {
-      "Annotation": "CopyFiles C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Profiling.Core.pdb",
-      "DisplayName": "Copying Unity.Profiling.Core.pdb",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.Profiling.Core.pdb"
-      ],
-      "Outputs": [
-        "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My Shelter Beta_Data/Managed/Unity.Profiling.Core.pdb"
-      ],
       "DebugActionIndex": 196
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 16587,
+      "PayloadOffset": 16586,
       "PayloadLength": 27,
       "PayloadDebugContentSnippet": "Hezek Games\nMy Shelter Beta",
       "Inputs": [],
@@ -3711,19 +3711,19 @@
       "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
     },
     {
+      "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Core.pdb"
+    },
+    {
+      "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/NaughtyAttributes.Test.pdb"
+    },
+    {
       "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/OccaSoftware.SuperSimpleSkybox.Demo.pdb"
     },
     {
       "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/OccaSoftware.SuperSimpleSkybox.Runtime.pdb"
     },
     {
-      "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AdaptivePerformance.pdb"
-    },
-    {
       "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.pdb"
-    },
-    {
-      "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.Profiling.Core.pdb"
     },
     {
       "File": "C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Library/Bee/PlayerScriptAssemblies/Unity.RenderPipelines.Core.Runtime.pdb"

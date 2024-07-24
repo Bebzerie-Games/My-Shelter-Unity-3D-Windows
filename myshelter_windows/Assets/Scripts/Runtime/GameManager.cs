@@ -1,23 +1,32 @@
-using MyShelterWin64.Building;
-using MyShelterWin64.Economy;
+using MyShelterWin64.Game.Economy;
 using MyShelterWin64.Game.Building;
-using MyShelterWin64.Player;
+using MyShelterWin64.Game.Player;
 using MyShelterWin64.RuntimeDebugging;
 using System;
 using UnityEngine;
 
 namespace MyShelterWin64.Game.Manager {
-    public class GameManager : MonoBehaviour {
+    public sealed class GameManager : MonoBehaviour {
         public static GameManager Instance {
-            get; set;
+            get {
+                if (_instance == null) {
+                    _instance = FindObjectOfType<GameManager>();
+                }
+
+                return _instance;
+            }
         }
+        static GameManager _instance; // derived from FindObjectOfType (tips from ytb InfaillibleCode)
 
         [Header("Debugging Unit :")]
         [SerializeField] GameObject _debuggingUnitGO;
         public MyShelterDebuggingTool DebuggingTools;
 
+        [Header("Game Pooling :")]
+        public GameEntityPoolManager GamePoolManager;
+
         [Header("HUD :")]
-        public PlayerHUDCtrl PlayerHUDCtrl;
+        public GameHUDCtrl GameHUDCtrl;
 
         [Header("Economy :")]
         public GameEconomyBhvr GameEconomy;
@@ -38,9 +47,6 @@ namespace MyShelterWin64.Game.Manager {
             get; set;
         }
 
-        [Header("Game Data :")]
-        public PlayerCameraBhvr CameraBhvr;
-
         string GetBuildVersion() => Application.version;
         string GetUnityVersion() => Application.unityVersion;
         string FormatGameVersion() => $"MyShelter v{GetBuildVersion()}\t\t{GetUnityVersion()}";
@@ -52,16 +58,20 @@ namespace MyShelterWin64.Game.Manager {
         private void OnEnable() {
 #if MS_DEBUGGING_ONLY
             _debuggingUnitGO.SetActive(true);
-            MS_PRINT(typeof(GameManager), "Debugging is active for this build");
+            MS_PRINT(typeof(GameManager), $"Debugging : {_debuggingUnitGO.gameObject.activeSelf}");
+            MS_PRINT(typeof(GameManager), $"Pooling : {GamePoolManager.gameObject.activeSelf}");
 #endif
         }
 
         private void Awake() {
-            Instance = this;
-            DontDestroyOnLoad(Instance);
+            // preventing of having other instance of GameManager fucking up the system
+            if (_instance != null)
+                Destroy(this);
+
+            DontDestroyOnLoad(this);
             GameVersion = FormatGameVersion();
 
-#if DEBUG
+#if MS_DEBUGGING_ONLY
             MS_PRINT(typeof(GameManager), GameVersion);
 #endif
         }

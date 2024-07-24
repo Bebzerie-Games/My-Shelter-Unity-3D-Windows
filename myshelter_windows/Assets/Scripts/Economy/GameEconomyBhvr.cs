@@ -1,16 +1,14 @@
-using MyShelterWin64.Building;
+using MyShelterWin64.Game.Building;
 using MyShelterWin64.Game.Manager;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace MyShelterWin64.Economy {
+namespace MyShelterWin64.Game.Economy {
     /// <summary>
     /// generation d'economie en runtime avec delais
     /// </summary>
-    public class GameEconomyBhvr : MonoBehaviour {
+    public sealed class GameEconomyBhvr : MonoBehaviour {
         [Header("Value :")]
         [SerializeField] GameEconomyGoldSO _goldEconomy;
         [SerializeField] GameEconomyVitalSO _vitalEconomy;
@@ -31,16 +29,7 @@ namespace MyShelterWin64.Economy {
         public float Vital;
 
         private void Start() {
-            List<IEnumerator> routines = new();
-
-            foreach (var economy in _buildingManager.GameBuildingsList)  
-            {
-                EconomyObjects.Add(economy); // TODO : creer le système de sauvegarde de l'economie du joueur dès que le status du developpment de jeu le permet
-                routines.Add(economy.Add());
-            }
-
-            foreach (var routine in routines)
-                StartCoroutine(routine);
+            // TODO : creer le système de sauvegarde de l'economie du joueur dès que le status du developpment de jeu le permet
         }
 
         public void UpdateBuildingList(GameBuilding building) {

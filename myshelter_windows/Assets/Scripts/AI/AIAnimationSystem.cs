@@ -1,8 +1,11 @@
 using UnityEngine;
-using UnityEngine.AI;
 
-namespace MyShelterWin64.AI {
+namespace MyShelterWin64.Game.AI {
+    /// <summary>
+    /// NPC's animation system
+    /// </summary>
     public class AIAnimationSystem : MonoBehaviour {
+        // TODO : voir si cela a besoin d'être refacto pour être utilisable pour le long terme
         [SerializeField] Animator _animator;
         [SerializeField] NPC _ai;
         [SerializeField] Transform _aiTransform;

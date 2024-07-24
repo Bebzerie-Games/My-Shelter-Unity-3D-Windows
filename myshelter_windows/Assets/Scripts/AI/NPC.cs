@@ -1,24 +1,30 @@
 using MyShelterWin64.Game.Manager;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace MyShelterWin64.AI {
-    public class NPC : MyShelterNPCBhvr {
+namespace MyShelterWin64.Game.AI {
+    /// <summary>
+    /// This is the main NPC component
+    /// </summary>
+    public sealed class NPC : MyShelterNPCBhvr {
 
         public NavMeshAgent Agent;
         [Space]
         [SerializeField] AIStateMachine _stateMachine = AIStateMachine.Idle;
-        [SerializeField] GameObject _aiPannel;
         [Space]
-        [SerializeField] AIState[] _states;
         [SerializeField] AIState _currentState;
         [Space]
-        [SerializeField] NPCScriptable _aiProfile;
+        [SerializeField] NPCSO _aiProfile;
         [Space]
         public AIAnimationSystem AnimationSystem;
 
-        public AIState[] AIStates => _states;
-        public NPCScriptable AIProfile => _aiProfile;
+        public override event Action OnInteractionEnter;
+        public override event Action OnInteractionExit;
+        public override event Action OnEntitySpawn;
+
+        public AIState[] AIStates => _aiProfile.NPCStates;
+        public NPCSO AIProfile => _aiProfile;
 
         public override AIStateMachine StateMachine => _stateMachine;
 
@@ -30,48 +36,56 @@ namespace MyShelterWin64.AI {
             return Agent.SetDestination(newPos);
         }
 
+        // only executed when called, it does not run in loop
         public void Evaluate(string argument) {
-            if (argument == "DoOpenAIPannel") {
-                _aiPannel.SetActive(!_aiPannel.activeSelf);
-                return;
-            }
-            
-            if (argument == "DoIdle") {
-                SetNewStateMachine(AIStateMachine.Idle);
-            } 
-            
-            else if (argument == "DoWander") {
-                SetNewStateMachine(AIStateMachine.Wander);
-            } 
-            
-            else {
-                SetStateMachine(CurrentState);
+            switch (argument) {
+                case "DoOpenAIPannel":
+                    GetNPCCallbacks().SetActive(!GetNPCCallbacks().activeSelf);
+                    return;
+
+                case "DoIdle":
+                    SetNewState(AIStateMachine.Idle);
+                    break;
+
+                case "DoWander":
+                    SetNewState(AIStateMachine.Wander);
+                    break;
+
+                default:
+                    break;
             }
         }
 
-        public IAIState GetIdleState() => _states[0];
-        public IAIState GetWanderState() => _states[1];
-        public IAIState GetAwareOfDangerState() => _states[2];
-        public IAIState GetAttackState() => _states[3];
+        public IAIState GetIdleState() => AIStates[0];
+        public IAIState GetWanderState() => AIStates[1];
+        public IAIState GetAwareOfDangerState() => AIStates[2];
+        public IAIState GetAttackState() => AIStates[3];
 
-        public AIState GetAIStateByCurrentStateMachine() {
-            Debug.Log((int)_stateMachine);
-            return _states[(int)_stateMachine];
-        }
-
-        public void SetNewStateMachine(AIStateMachine state) {
+        /// <summary>
+        /// working with enums, each enum will declare which AIState to invoke
+        /// </summary>
+        /// <param name="state">the state to invoke</param>
+        public void SetNewState(AIStateMachine state) {
             _currentState.OnStateExit(this);
 
             _stateMachine = state;
-            _currentState = GetAIStateByCurrentStateMachine();
+            _currentState = AIStates[(int)state];
 
-#if DEBUG
-            GameManager.MS_PRINT(typeof(NPC), $"{AIProfile.NPCName}     OK {nameof(SetNewStateMachine)} -> AIStateMachine.{nameof(state)}");
+#if MS_DEBUGGING_ONLY
+            GameManager.MS_PRINT(typeof(NPC), $"{EntitySO.EntityName}     OK {nameof(SetNewState)} -> AIStateMachine.{nameof(state)}");
 #endif
         }
 
-        void SetStateMachine(IAIState state) {
-            ExecuteStateMachine(this, state);
+        public override void OnSpawn() {
+            OnEntitySpawn.Invoke();
+        }
+
+        public override void DoInteractionEnter() {
+            OnInteractionEnter.Invoke();
+        }
+
+        public override void DoInteractionExit() {
+            OnInteractionExit.Invoke();
         }
     }
 }

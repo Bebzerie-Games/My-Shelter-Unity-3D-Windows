@@ -1,19 +1,18 @@
-﻿using MyShelterWin64.Game.Manager;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
 
-namespace MyShelterWin64.Game {
-    public class GameEntityManager : MonoBehaviour {
-        public GameEntityDatabaseSO Entities;
-
-        public Dictionary<int, Entity> EntityDatabase = new();
+namespace MyShelterWin64.Game.Manager {
+    public sealed class GameEntityManager : MonoBehaviour {
+        public GameEntityDatabaseSO EntityStore;
 
         public ReadOnlyDictionary<int, Entity> RL_EntityDatabase;
 
         void Start() {
-            for (int i = 0; i < Entities.EntityDatabase.Length; i++) {
-                AddNewEntity(Entities.EntityDatabase[i], Entities.EntityDatabase[i].EntitySO.EntityID);
+            Dictionary<int, Entity> EntityDatabase = new();
+
+            for (int i = 0; i < EntityStore.EntityDatabase.Length; i++) {
+                EntityDatabase.Add(EntityStore.EntityDatabase[i].EntitySO.EntityID, EntityStore.EntityDatabase[i]);
             }
 
             RL_EntityDatabase = new ReadOnlyDictionary<int, Entity>(EntityDatabase);
@@ -23,12 +22,8 @@ namespace MyShelterWin64.Game {
 #endif
         }
 
-        public void AddNewEntity(Entity entity, int id) {
-            EntityDatabase.Add(id, entity);
-        }
-
         public Entity GetByID(int id) {
-            return EntityDatabase[id];
+            return RL_EntityDatabase[id];
         }
     }
 }

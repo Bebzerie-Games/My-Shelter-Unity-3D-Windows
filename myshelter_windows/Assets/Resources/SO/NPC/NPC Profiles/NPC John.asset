@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591b4e4d39aadd44aaccf4eed10c4a53, type: 3}
+  m_Name: NPC John
+  m_EditorClassIdentifier: 
+  NPCClass: 0
+  NPCEntity: {fileID: 11400000, guid: 5c61d1de4bcb79644b03b05892f6637e, type: 2}
+  NPCStates:
+  - {fileID: 11400000, guid: 9d415afc1200b034aaf79904d361aa6a, type: 2}
+  - {fileID: 11400000, guid: a8f5ca1bcab1d784b839f0e53fc7d85f, type: 2}

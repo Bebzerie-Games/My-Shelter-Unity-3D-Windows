@@ -1,16 +1,10 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
-namespace MyShelterWin64.Player {
+namespace MyShelterWin64.Game.Player {
     /// <summary>
     /// MyShelter's player camera behaviour (movement, zoom, handling click callback receiver, ...)
     /// </summary>
-    public class PlayerCameraBhvr : MonoBehaviour {
-        // click to drag feature
-        Vector2 _lastMousePosition;
-        bool _dragPanMoveActive = true;
-        // ---------------------
-
+    public sealed class PlayerCameraBhvr : MonoBehaviour {
         readonly float _moveSpeed = 30f;
         readonly float _rotateSpeed = 90f;
         readonly int _edgeScrollSide = 20;
@@ -18,18 +12,11 @@ namespace MyShelterWin64.Player {
         float _fov = 0, _velocity = 0;
 
         private void Update() {
-
-            bool useAccelerator = Input.GetKeyDown(KeyCode.LeftShift);
-
             // MOVEMENT
             Vector3 moveDir = transform.forward * Input.GetAxis("Vertical") + transform.right *
                 Input.GetAxis("Horizontal");
 
-            if (useAccelerator)
-                transform.position += Mathf.Lerp(_moveSpeed, _moveSpeed + 4, .25f) * Time.deltaTime * moveDir;
-            else {
-                transform.position += _moveSpeed * Time.deltaTime * moveDir;
-            }
+            transform.position += _moveSpeed * Time.deltaTime * moveDir;
 
             // --------------------
 
@@ -53,23 +40,6 @@ namespace MyShelterWin64.Player {
 
             if (Input.GetKey(KeyCode.Q)) rotateDir = +1;
             if (Input.GetKey(KeyCode.E)) rotateDir = -1;
-
-            if (Input.GetMouseButton(1)) {
-                _dragPanMoveActive = true;
-                _lastMousePosition = Input.mousePosition;
-            }
-
-            if (Input.GetMouseButtonUp(1))
-                _dragPanMoveActive = false;
-
-            if (_dragPanMoveActive) {
-                Vector2 mouseMovementDelta = (Vector2)Input.mousePosition - _lastMousePosition;
-
-                moveDir.x = mouseMovementDelta.x * 20f;
-                moveDir.z = mouseMovementDelta.y * 20f;
-
-                _lastMousePosition = Input.mousePosition;
-            }
 
             transform.eulerAngles += new Vector3(0, rotateDir * _rotateSpeed * Time.deltaTime, 0);
             // -----------------------------

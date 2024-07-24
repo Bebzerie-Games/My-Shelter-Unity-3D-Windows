@@ -59,15 +59,17 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	""
+	"script"
 ]
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
-showSavedSearchPanel = false
+showSavedSearchPanel = true
 hideTabs = false
 expandedQueries = [
 ]
-queryBuilder = true
+queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"
 disabledIndexers = ""

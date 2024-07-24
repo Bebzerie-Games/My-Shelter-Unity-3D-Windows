@@ -1,4 +1,4 @@
-﻿namespace MyShelterWin64.Economy {
+﻿namespace MyShelterWin64.Game.Economy {
     public enum GameEconomyObjectType {
         Electricity = 0,
         Vital = 1,

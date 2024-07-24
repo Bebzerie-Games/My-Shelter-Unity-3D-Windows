@@ -5,7 +5,7 @@ using UnityEngine;
 
 #if MS_DEBUGGING_ONLY
 namespace MyShelterWin64.RuntimeDebugging {
-    public class MyShelterDebuggingTool : MonoBehaviour {
+    public sealed class MyShelterDebuggingTool : MonoBehaviour {
         [Header("Debugging TMP :")]
         [SerializeField] TextMeshProUGUI _gridWorldSpaceCoord;
 

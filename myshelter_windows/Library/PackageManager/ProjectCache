@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638505135479650590
-    m_Hash: 3675605935
+      ticks: 638516486238376537
+    m_Hash: 1722723129
   m_LockFileStatus:
     m_FilePath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638505135479730525
-    m_Hash: 1991089887
+      ticks: 638516486252777586
+    m_Hash: 1054612725
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Packages/com.occasoftware.super-simple-skybox/package.json:
@@ -30,145 +30,6 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/myshelter_windows/Packages
 m_EditorVersion: 2022.3.27f1 (73effa14754f)
 m_ResolvedPackages:
-- packageId: com.unity.adaptiveperformance@5.1.0
-  testable: 0
-  isDirectDependency: 1
-  version: 5.1.0
-  source: 1
-  resolvedPath: C:\Users\enzor\Dev\PC\pc3D.unity2022.myshelter.windowsgame\myshelter_windows\Library\PackageCache\com.unity.adaptiveperformance@5.1.0
-  assetPath: Packages/com.unity.adaptiveperformance
-  name: com.unity.adaptiveperformance
-  displayName: Adaptive Performance
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: 'The Adaptive Performance package provides an API to get feedback
-    about the thermal and power state of mobile devices, enabling applications to
-    make performance-relevant adaptions at runtime.
-
-
-    For instruction on how
-    to use samples, please read the documentation.
-
-
-    By installing this package,
-    you agree to the terms and conditions of the Unity End User License Agreement
-    found under "View licenses" above.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.2.0-preview.1
-    - 1.0.0
-    - 1.0.1
-    - 1.1.0-preview.2
-    - 1.1.0-preview.3
-    - 1.1.0-preview.4
-    - 1.1.0-preview.5
-    - 1.1.0-preview.7
-    - 1.1.0
-    - 1.1.6
-    - 1.1.9
-    - 1.1.10
-    - 1.2.0
-    - 1.2.2
-    - 1.2.3
-    - 2.0.0-preview.1
-    - 2.0.0-preview.2
-    - 2.0.0-preview.4
-    - 2.0.0-preview.7
-    - 2.0.0-preview.8
-    - 2.0.0-preview.9
-    - 2.0.0-preview.10
-    - 2.0.0-preview.11
-    - 2.0.0
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 2.1.1
-    - 2.2.1
-    - 2.2.3
-    - 2.2.4
-    - 3.0.0-pre.2
-    - 3.0.0
-    - 3.0.2
-    - 3.0.3
-    - 4.0.0-pre.1
-    - 4.0.0
-    - 4.0.1
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.0-pre.3
-    - 5.0.0-pre.4
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.1.0
-    compatible:
-    - 4.0.1
-    - 5.0.0-pre.1
-    - 5.0.0-pre.2
-    - 5.0.0-pre.3
-    - 5.0.0-pre.4
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.1.0
-    recommended: 4.0.1
-    deprecated: []
-  dependencies:
-  - name: com.unity.profiling.core
-    version: 1.0.2
-  resolvedDependencies:
-  - name: com.unity.profiling.core
-    version: 1.0.2
-  keywords:
-  - mobile
-  - adaptive
-  - performance
-  - utility
-  - utilities
-  - core
-  - samsung
-  - ap
-  - provider
-  - subsystem
-  - indexer
-  - scaler
-  - vrr
-  - boost
-  - profiles
-  - cluster
-  - clusterinfo
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638477276390000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.adaptiveperformance@5.1/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.adaptiveperformance.git
-    revision: 8c5e0c58d52d3657cd032cdf5455ac65d67878e8
-    path: 
-  unityLifecycle:
-    version: 4.0.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
 - packageId: com.unity.ai.navigation@1.1.5
   testable: 0
   isDirectDependency: 1
@@ -828,6 +689,7 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.0.7
     - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -843,6 +705,7 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.0.7
     - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
@@ -854,7 +717,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.9
     - 4.0.0-pre.1
     - 4.0.0-pre.2
-    recommended: 3.0.8
+    recommended: 3.0.9
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -3414,69 +3277,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.6
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-- packageId: com.unity.profiling.core@1.0.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.2
-  source: 1
-  resolvedPath: C:\Users\enzor\Dev\PC\pc3D.unity2022.myshelter.windowsgame\myshelter_windows\Library\PackageCache\com.unity.profiling.core@1.0.2
-  assetPath: Packages/com.unity.profiling.core
-  name: com.unity.profiling.core
-  displayName: Unity Profiling Core API
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: The Unity Profiling Core package provides an API for code instrumentation
-    markup, and for profiling statistic collection.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 0.1.0-preview.1
-    - 0.2.0-preview.1
-    - 0.2.1-preview.1
-    - 1.0.0-pre.1
-    - 1.0.0
-    - 1.0.2
-    compatible:
-    - 1.0.2
-    recommended: 1.0.2
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - profiler
-  - profiling
-  - api
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637828752310000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/profiler.git
-    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
-    path: 
-  unityLifecycle:
-    version: 1.0.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0

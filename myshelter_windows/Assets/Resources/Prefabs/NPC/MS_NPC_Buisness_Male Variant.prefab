@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5552704961685168479}
-  - component: {fileID: 6936558125033679023}
   m_Layer: 0
   m_Name: Callbacks
   m_TagString: Untagged
@@ -33,27 +32,6 @@ Transform:
   - {fileID: 5824005277741490516}
   m_Father: {fileID: 4105334839397169905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6936558125033679023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309450473904230579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f475ead4ab0eef41891fdcfce409fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Agent: {fileID: 4997388642190745565}
-  _stateMachine: 0
-  _aiPannel: {fileID: 5340704033457504192}
-  _states:
-  - {fileID: 11400000, guid: 9d415afc1200b034aaf79904d361aa6a, type: 2}
-  - {fileID: 11400000, guid: a8f5ca1bcab1d784b839f0e53fc7d85f, type: 2}
-  _currentState: {fileID: 11400000, guid: 9d415afc1200b034aaf79904d361aa6a, type: 2}
-  _aiProfile: {fileID: 11400000, guid: 9e792fd814febbe4598bcbb45a5c0bcf, type: 2}
-  AnimationSystem: {fileID: 1162025431005705312}
 --- !u!1 &937299599626230270
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,9 +66,9 @@ RectTransform:
   - {fileID: 5783390866177939426}
   m_Father: {fileID: 3900552409231447433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -218.75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -200.33331}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2228455430543487970
@@ -175,7 +153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6936558125033679023}
+      - m_Target: {fileID: 4452420545432955977}
         m_TargetAssemblyTypeName: MyShelterWin64.AI.NPC, Assembly-CSharp
         m_MethodName: Evaluate
         m_Mode: 5
@@ -185,18 +163,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: DoDie
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MyShelterWin64.Player.PlayerInputBhvr, Assembly-CSharp
-        m_MethodName: SetMouse
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5340704033457504192}
@@ -245,9 +211,9 @@ RectTransform:
   - {fileID: 8368056078618233838}
   m_Father: {fileID: 3900552409231447433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -53}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3822810078492204702
@@ -332,7 +298,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6936558125033679023}
+      - m_Target: {fileID: 4452420545432955977}
         m_TargetAssemblyTypeName: MyShelterWin64.AI.NPC, Assembly-CSharp
         m_MethodName: Evaluate
         m_Mode: 5
@@ -342,18 +308,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: DoWander
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MyShelterWin64.Player.PlayerInputBhvr, Assembly-CSharp
-        m_MethodName: SetMouse
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5340704033457504192}
@@ -402,9 +356,9 @@ RectTransform:
   - {fileID: 4186902185985487}
   m_Father: {fileID: 3900552409231447433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -163.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -126.66666}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6471077506270972812
@@ -489,7 +443,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6936558125033679023}
+      - m_Target: {fileID: 4452420545432955977}
         m_TargetAssemblyTypeName: MyShelterWin64.AI.NPC, Assembly-CSharp
         m_MethodName: Evaluate
         m_Mode: 5
@@ -499,18 +453,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: DoIdle
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MyShelterWin64.Player.PlayerInputBhvr, Assembly-CSharp
-        m_MethodName: SetMouse
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5340704033457504192}
@@ -1448,11 +1390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 402344, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402344, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 402344, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1498,13 +1440,13 @@ PrefabInstance:
       addedObject: {fileID: 1860414264755045733}
     - targetCorrespondingSourceObject: {fileID: 109058, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 240559042986603095}
-    - targetCorrespondingSourceObject: {fileID: 109058, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4997388642190745565}
     - targetCorrespondingSourceObject: {fileID: 109058, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1162025431005705312}
+    - targetCorrespondingSourceObject: {fileID: 109058, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4452420545432955977}
   m_SourcePrefab: {fileID: 100100000, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}
 --- !u!1 &4105334839396938587 stripped
 GameObject:
@@ -1532,21 +1474,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.5, z: 1}
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &240559042986603095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4105334839396938587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69df88219112f2749bf304a4d2922384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntitySO: {fileID: 11400000, guid: 5c61d1de4bcb79644b03b05892f6637e, type: 2}
-  EconomyObject: {fileID: 0}
-  _npcCallbacks: {fileID: 5340704033457504192}
 --- !u!195 &4997388642190745565
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1582,8 +1509,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 4105334839406387299}
-  _ai: {fileID: 6936558125033679023}
+  _ai: {fileID: 4452420545432955977}
   _aiTransform: {fileID: 4105334839397169905}
+--- !u!114 &4452420545432955977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105334839396938587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f475ead4ab0eef41891fdcfce409fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entitySO: {fileID: 11400000, guid: 5c61d1de4bcb79644b03b05892f6637e, type: 2}
+  _npcCallbacks: {fileID: 5340704033457504192}
+  Agent: {fileID: 4997388642190745565}
+  _stateMachine: 0
+  _currentState: {fileID: 11400000, guid: 9d415afc1200b034aaf79904d361aa6a, type: 2}
+  _aiProfile: {fileID: 11400000, guid: ff9963cd37a99504b992b3a313068b45, type: 2}
+  AnimationSystem: {fileID: 1162025431005705312}
 --- !u!4 &4105334839397169905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402344, guid: 6a6ce1eaed431fe47889575f4b5b90eb, type: 3}

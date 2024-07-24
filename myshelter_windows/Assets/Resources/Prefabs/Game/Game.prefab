@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2037845600454481527}
   - component: {fileID: 8124569673600916225}
   - component: {fileID: 2345904170750833698}
+  - component: {fileID: 7972357370496536211}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -50,6 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _debuggingUnitGO: {fileID: 8408160251567028340}
   DebuggingTools: {fileID: 2314980673472237376}
+  GamePoolManager: {fileID: 7972357370496536211}
+  PlayerHUDCtrl: {fileID: 0}
   GameEconomy: {fileID: 2037845600454481527}
   BuildingPlacement: {fileID: 0}
   BuildingManager: {fileID: 8124569673600916225}
@@ -98,7 +101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b87f7ee868262147864adff0433eaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Entities: {fileID: 11400000, guid: 9222028d4ddc8d642b2e4a72b8ad8015, type: 2}
+  EntityStore: {fileID: 11400000, guid: 9222028d4ddc8d642b2e4a72b8ad8015, type: 2}
+--- !u!114 &7972357370496536211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334329670673514219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f6700b9d84f2143b7bb25213b20ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityPool: {fileID: 0}
 --- !u!1 &5399582311405295235
 GameObject:
   m_ObjectHideFlags: 0

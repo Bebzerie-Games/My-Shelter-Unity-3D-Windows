@@ -1,61 +1,54 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp:
-    - MyShelterWin64.AI.AIAnimationSystem
-    - MyShelterWin64.AI.IdleStateAction
-    - MyShelterWin64.AI.NPC
-    - MyShelterWin64.AI.NPCScriptable
-    - MyShelterWin64.AI.WanderStateAction
-    - MyShelterWin64.Building.GameBuilding
-    - MyShelterWin64.Building.GameBuildingManager
-    - MyShelterWin64.Building.GameBuildingSO
-    - MyShelterWin64.Economy.GameEconomyBhvr
-    - MyShelterWin64.Economy.GameEconomyGoldSO
-    - MyShelterWin64.Economy.GameEconomyVitalSO
+    - MyShelterWin64.Game.AI.AIAnimationSystem
+    - MyShelterWin64.Game.AI.IdleStateAction
+    - MyShelterWin64.Game.AI.NPC
+    - MyShelterWin64.Game.AI.NPCScriptable
+    - MyShelterWin64.Game.AI.WanderStateAction
     - MyShelterWin64.Game.Building.BuildingPlacementCtrl
-    - MyShelterWin64.Game.Entity
+    - MyShelterWin64.Game.Building.GameBuilding
+    - MyShelterWin64.Game.Building.GameBuildingSO
+    - MyShelterWin64.Game.Economy.GameEconomyBhvr
+    - MyShelterWin64.Game.Economy.GameEconomyGoldSO
+    - MyShelterWin64.Game.Economy.GameEconomyVitalSO
     - MyShelterWin64.Game.EntitySO
     - MyShelterWin64.Game.GameEntityDatabaseSO
-    - MyShelterWin64.Game.GameEntityManager
+    - MyShelterWin64.Game.Manager.GameBuildingManager
+    - MyShelterWin64.Game.Manager.GameEntityManager
     - MyShelterWin64.Game.Manager.GameManager
-    - MyShelterWin64.Player.PlayerCameraBhvr
-    - MyShelterWin64.Player.PlayerInputBhvr
+    - MyShelterWin64.Game.Player.PlayerCameraBhvr
+    - MyShelterWin64.Game.Player.PlayerHUDCtrl
+    - MyShelterWin64.Game.Player.PlayerInputBhvr
+    - MyShelterWin64.Game.Pooling.GameEntityPoolSO
     - MyShelterWin64.RuntimeDebugging.MyShelterDebuggingTool
-    - PlayerHUDCtrl
     Assembly-CSharp.dll:
-    - MyShelterWin64.AI.AIAnimationSystem
-    - MyShelterWin64.AI.IdleStateAction
-    - MyShelterWin64.AI.NPC
-    - MyShelterWin64.AI.NPCScriptable
-    - MyShelterWin64.AI.WanderStateAction
-    - MyShelterWin64.Building.GameBuilding
-    - MyShelterWin64.Building.GameBuildingManager
-    - MyShelterWin64.Building.GameBuildingSO
-    - MyShelterWin64.Economy.GameEconomyBhvr
-    - MyShelterWin64.Economy.GameEconomyGoldSO
-    - MyShelterWin64.Economy.GameEconomyVitalSO
+    - MyShelterWin64.Game.AI.AIAnimationSystem
+    - MyShelterWin64.Game.AI.IdleStateAction
+    - MyShelterWin64.Game.AI.NPC
+    - MyShelterWin64.Game.AI.NPCScriptable
+    - MyShelterWin64.Game.AI.WanderStateAction
     - MyShelterWin64.Game.Building.BuildingPlacementCtrl
-    - MyShelterWin64.Game.Entity
+    - MyShelterWin64.Game.Building.GameBuilding
+    - MyShelterWin64.Game.Building.GameBuildingSO
+    - MyShelterWin64.Game.Economy.GameEconomyBhvr
+    - MyShelterWin64.Game.Economy.GameEconomyGoldSO
+    - MyShelterWin64.Game.Economy.GameEconomyVitalSO
     - MyShelterWin64.Game.EntitySO
     - MyShelterWin64.Game.GameEntityDatabaseSO
-    - MyShelterWin64.Game.GameEntityManager
+    - MyShelterWin64.Game.Manager.GameBuildingManager
+    - MyShelterWin64.Game.Manager.GameEntityManager
+    - MyShelterWin64.Game.Manager.GameEntityPoolManager
     - MyShelterWin64.Game.Manager.GameManager
-    - MyShelterWin64.Player.PlayerCameraBhvr
-    - MyShelterWin64.Player.PlayerInputBhvr
+    - MyShelterWin64.Game.Player.PlayerCameraBhvr
+    - MyShelterWin64.Game.Player.PlayerHUDCtrl
+    - MyShelterWin64.Game.Player.PlayerInputBhvr
+    - MyShelterWin64.Game.Pooling.GameEntityPool
+    - MyShelterWin64.Game.Pooling.GameEntityPoolSO
+    - MyShelterWin64.RuntimeDebugging.DisableFromProductionRelease
     - MyShelterWin64.RuntimeDebugging.MyShelterDebuggingTool
-    - PlayerHUDCtrl
-    Unity.AI.Navigation.Editor.dll:
-    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
-    Unity.AdaptivePerformance.Editor.dll:
-    - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceGeneralSettingsPerBuildTarget
-    Unity.AdaptivePerformance.Simulator.Editor.dll:
-    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderLoader
-    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderSettings
-    Unity.AdaptivePerformance.dll:
-    - UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
-    - UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -180,55 +173,19 @@ ScriptsOnlyBuild:
     fullTypeName: MyShelterWin64.Game.Building.BuildingPlacementCtrl
     methodName: StartPlacementOfObject
   - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
+    fullTypeName: MyShelterWin64.Game.AI.NPC
     methodName: Evaluate
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
+    fullTypeName: MyShelterWin64.Game.AI.NPC
     methodName: Evaluate
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
-    methodName: Evaluate
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: MyShelterWin64.AI.NPC
+    fullTypeName: MyShelterWin64.Game.AI.NPC
     methodName: Evaluate
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
@@ -236,6 +193,24 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MyShelterWin64.Game.Building.BuildingPlacementCtrl
     methodName: StartPlacementOfObject
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.Game.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.Game.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: MyShelterWin64.Game.AI.NPC
+    methodName: Evaluate
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -329,145 +304,151 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 16674}
+      Script: {instanceID: 16676}
     - Class: 114
-      Script: {instanceID: 16716}
+      Script: {instanceID: 16720}
     - Class: 114
-      Script: {instanceID: 16754}
+      Script: {instanceID: 16776}
     - Class: 114
-      Script: {instanceID: 16760}
+      Script: {instanceID: 16780}
     - Class: 114
-      Script: {instanceID: 16828}
+      Script: {instanceID: 16848}
     - Class: 114
-      Script: {instanceID: 16914}
+      Script: {instanceID: 16942}
     - Class: 114
-      Script: {instanceID: 16926}
+      Script: {instanceID: 16958}
     - Class: 114
-      Script: {instanceID: 17028}
+      Script: {instanceID: 17068}
     - Class: 114
-      Script: {instanceID: 17056}
+      Script: {instanceID: 17106}
     - Class: 114
-      Script: {instanceID: 17140}
+      Script: {instanceID: 17200}
     - Class: 114
-      Script: {instanceID: 17146}
+      Script: {instanceID: 17208}
     - Class: 114
-      Script: {instanceID: 17318}
+      Script: {instanceID: 17272}
     - Class: 114
-      Script: {instanceID: 17370}
+      Script: {instanceID: 17390}
     - Class: 114
-      Script: {instanceID: 17470}
+      Script: {instanceID: 17442}
     - Class: 114
-      Script: {instanceID: 17482}
+      Script: {instanceID: 17556}
     - Class: 114
-      Script: {instanceID: 17500}
+      Script: {instanceID: 17558}
     - Class: 114
-      Script: {instanceID: 17502}
+      Script: {instanceID: 17582}
     - Class: 114
-      Script: {instanceID: 17526}
+      Script: {instanceID: 17584}
     - Class: 114
-      Script: {instanceID: 17594}
+      Script: {instanceID: 17614}
     - Class: 114
-      Script: {instanceID: 17684}
+      Script: {instanceID: 17676}
     - Class: 114
-      Script: {instanceID: 17804}
+      Script: {instanceID: 17690}
     - Class: 114
-      Script: {instanceID: 17902}
+      Script: {instanceID: 17794}
     - Class: 114
-      Script: {instanceID: 17938}
+      Script: {instanceID: 17932}
     - Class: 114
-      Script: {instanceID: 17944}
+      Script: {instanceID: 18044}
     - Class: 114
-      Script: {instanceID: 18256}
+      Script: {instanceID: 18082}
     - Class: 114
-      Script: {instanceID: 18318}
+      Script: {instanceID: 18088}
     - Class: 114
-      Script: {instanceID: 18326}
+      Script: {instanceID: 18450}
     - Class: 114
-      Script: {instanceID: 18354}
+      Script: {instanceID: 18508}
     - Class: 114
-      Script: {instanceID: 18378}
+      Script: {instanceID: 18518}
     - Class: 114
-      Script: {instanceID: 18418}
+      Script: {instanceID: 18548}
     - Class: 114
-      Script: {instanceID: 18442}
+      Script: {instanceID: 18580}
     - Class: 114
-      Script: {instanceID: 18448}
+      Script: {instanceID: 18624}
     - Class: 114
-      Script: {instanceID: 18542}
+      Script: {instanceID: 18650}
     - Class: 114
-      Script: {instanceID: 18550}
+      Script: {instanceID: 18656}
     - Class: 114
-      Script: {instanceID: 18582}
-    - Class: 114
-      Script: {instanceID: 18628}
-    - Class: 114
-      Script: {instanceID: 18644}
-    - Class: 114
-      Script: {instanceID: 18698}
-    - Class: 114
-      Script: {instanceID: 18724}
+      Script: {instanceID: 18756}
     - Class: 114
       Script: {instanceID: 18764}
     - Class: 114
-      Script: {instanceID: 18882}
+      Script: {instanceID: 18802}
     - Class: 114
-      Script: {instanceID: 18884}
+      Script: {instanceID: 18852}
     - Class: 114
-      Script: {instanceID: 19026}
+      Script: {instanceID: 18868}
     - Class: 114
-      Script: {instanceID: 19196}
+      Script: {instanceID: 18930}
     - Class: 114
-      Script: {instanceID: 19238}
+      Script: {instanceID: 18960}
     - Class: 114
-      Script: {instanceID: 19340}
+      Script: {instanceID: 19010}
     - Class: 114
-      Script: {instanceID: 19344}
+      Script: {instanceID: 19136}
     - Class: 114
-      Script: {instanceID: 19388}
+      Script: {instanceID: 19144}
     - Class: 114
-      Script: {instanceID: 19390}
+      Script: {instanceID: 19298}
     - Class: 114
-      Script: {instanceID: 19416}
+      Script: {instanceID: 19498}
     - Class: 114
-      Script: {instanceID: 19534}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 19600}
+      Script: {instanceID: 19664}
     - Class: 114
-      Script: {instanceID: 19684}
+      Script: {instanceID: 19666}
     - Class: 114
-      Script: {instanceID: 19812}
+      Script: {instanceID: 19718}
     - Class: 114
-      Script: {instanceID: 20088}
+      Script: {instanceID: 19720}
     - Class: 114
-      Script: {instanceID: 20266}
+      Script: {instanceID: 19754}
     - Class: 114
-      Script: {instanceID: 20450}
+      Script: {instanceID: 19884}
     - Class: 114
-      Script: {instanceID: 20486}
+      Script: {instanceID: 19962}
     - Class: 114
-      Script: {instanceID: 20702}
+      Script: {instanceID: 20058}
     - Class: 114
-      Script: {instanceID: 20746}
+      Script: {instanceID: 20192}
     - Class: 114
-      Script: {instanceID: 20798}
+      Script: {instanceID: 20506}
     - Class: 114
-      Script: {instanceID: 20852}
+      Script: {instanceID: 20706}
+    - Class: 114
+      Script: {instanceID: 20908}
     - Class: 114
       Script: {instanceID: 20944}
     - Class: 114
-      Script: {instanceID: 21136}
+      Script: {instanceID: 21038}
     - Class: 114
-      Script: {instanceID: 21140}
+      Script: {instanceID: 21196}
     - Class: 114
-      Script: {instanceID: 21264}
-    - Class: 114
-      Script: {instanceID: 21272}
-    - Class: 114
-      Script: {instanceID: 21302}
+      Script: {instanceID: 21244}
     - Class: 114
       Script: {instanceID: 21366}
     - Class: 114
-      Script: {instanceID: 21582}
+      Script: {instanceID: 21468}
+    - Class: 114
+      Script: {instanceID: 21672}
+    - Class: 114
+      Script: {instanceID: 21676}
+    - Class: 114
+      Script: {instanceID: 21804}
+    - Class: 114
+      Script: {instanceID: 21812}
+    - Class: 114
+      Script: {instanceID: 21846}
+    - Class: 114
+      Script: {instanceID: 21908}
+    - Class: 114
+      Script: {instanceID: 21914}
+    - Class: 114
+      Script: {instanceID: 22084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -529,16 +510,16 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: f235b66bbaad891803c9d777dfd67956
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveLut
-  - hash:
-      serializedVersion: 2
       Hash: ed2c59b75f8f3cd8df4cd4387d965e71
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerVector2
+  - hash:
+      serializedVersion: 2
+      Hash: 9da17c1ffcfc464b5cf2e7ed20c71a00
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _NaughtyScriptableObject
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -547,9 +528,9 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c02107a673086de399625d02972534c3
+      Hash: 98ac26642c39341fc8b0b2c72fe74264
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Economy
+    namespaceName: MyShelterWin64.Game.Economy
     className: GameEconomyBhvr
   - hash:
       serializedVersion: 2
@@ -565,28 +546,22 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
+      Hash: c1818314a04aa84fc37062b287db61b7
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.AI
+    className: AIAnimationSystem
+  - hash:
+      serializedVersion: 2
       Hash: dd9dda1dfd39e605c49e72003342ef5d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 5483ce6fbbf7c9c8b303273db15d14a4
-    assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
-    className: AIAnimationSystem
-  - hash:
-      serializedVersion: 2
       Hash: 8d7ab1303b1c14da5fdd62bf96ca6e89
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: FreeCamera
-  - hash:
-      serializedVersion: 2
-      Hash: 28be742dfed98d22c3acbf7df788a6b1
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveDecals
   - hash:
       serializedVersion: 2
       Hash: 47ee34eb8b6021efa0289dbbb17a5a85
@@ -649,12 +624,6 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 89e2f93ac259634cf81b44c25bc0fc9a
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveShadowmapResolution
-  - hash:
-      serializedVersion: 2
       Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -673,40 +642,46 @@ ScriptsOnlyBuild:
     className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
+      Hash: 0e567448f4ec0d57860659515e39e9e2
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.RuntimeDebugging
+    className: DisableFromProductionRelease
+  - hash:
+      serializedVersion: 2
+      Hash: c4f2fd5a2e866f024314d06066baabc3
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: MinMaxSliderTest
+  - hash:
+      serializedVersion: 2
       Hash: 075aadccd467c1c21c2b12367cdf5dc4
     assemblyName: OccaSoftware.SuperSimpleSkybox.Runtime
     namespaceName: OccaSoftware.SuperSimpleSkybox.Runtime
     className: Moon
   - hash:
       serializedVersion: 2
-      Hash: 58785bcba46466317503951ef6e42079
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptivePerformanceGeneralSettings
+      Hash: ff2e2d3d0433a886d20a4e4d1e843f89
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ResizableTextAreaTest
   - hash:
       serializedVersion: 2
-      Hash: be643a0a4d647cb5696c4feebba95a24
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptivePerformanceManagerSpawner
-  - hash:
-      serializedVersion: 2
-      Hash: 71f60f2c9fe8ea29ce479d2e176e9d10
+      Hash: a8b48beee04d7e48f4d422d784ea9de5
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Player
+    namespaceName: MyShelterWin64.Game.Player
     className: PlayerInputBhvr
   - hash:
       serializedVersion: 2
-      Hash: 3bba28b9baf21ce34484a9249d3635d6
+      Hash: 315e04e84a619831ab7fede76f4832eb
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
+    namespaceName: MyShelterWin64.Game.AI
     className: IdleStateAction
   - hash:
       serializedVersion: 2
-      Hash: 25f9856e61afbe27958849616102671e
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveShadowCascade
+      Hash: fa459266c334c02b81f5733722419453
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: OnValueChangedTest
   - hash:
       serializedVersion: 2
       Hash: 3e1ba87a30ba656beab510dc2fa7cdc3
@@ -721,16 +696,16 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
-      Hash: d55992199bd2f5a5502658391cdf8ba7
-    assemblyName: Unity.AI.Navigation
-    namespaceName: Unity.AI.Navigation
-    className: NavMeshSurface
-  - hash:
-      serializedVersion: 2
       Hash: 6b2b20d5352b9f1294595326f54bd3c2
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerObjectPopupField
+  - hash:
+      serializedVersion: 2
+      Hash: d55992199bd2f5a5502658391cdf8ba7
+    assemblyName: Unity.AI.Navigation
+    namespaceName: Unity.AI.Navigation
+    className: NavMeshSurface
   - hash:
       serializedVersion: 2
       Hash: e8fd74e57e72e8e4ef28792881adb864
@@ -745,6 +720,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
+      Hash: 376ffdbb4af162b147f66f709f1200ec
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _TestScriptableObjectA
+  - hash:
+      serializedVersion: 2
       Hash: 58570e231c93c2f96918856759b81286
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -757,10 +738,22 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: d625476f731facce1414da966c86cd3a
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Pooling
+    className: GameEntityPool
+  - hash:
+      serializedVersion: 2
       Hash: 0c6de72eaf8c1070da824268c4bfad9d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 6a14a4ebf41b36d2b98ae72666f53f92
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: SortingLayerTest
   - hash:
       serializedVersion: 2
       Hash: 7e93247d600e115dac0cdd880de94e99
@@ -775,9 +768,9 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerMessageBox
   - hash:
       serializedVersion: 2
-      Hash: 82dd5c75d250bdb3376da2cbccb148cc
+      Hash: 17d61acc031387403da63a047e0fd4a1
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Economy
+    namespaceName: MyShelterWin64.Game.Economy
     className: GameEconomyObject
   - hash:
       serializedVersion: 2
@@ -805,6 +798,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
+      Hash: 76eecd5e8b8dde3316b609df12b021b1
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: MinMaxValueTest
+  - hash:
+      serializedVersion: 2
       Hash: 049f6aa84fe1cb5359c9338e96d0b07e
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -823,9 +822,9 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerGroup
   - hash:
       serializedVersion: 2
-      Hash: be57a41df5cbebb8d9a5af0e74d7a9a3
+      Hash: cba5fbc488bc1e2a50cda1e953d2e972
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Building
+    namespaceName: MyShelterWin64.Game.Building
     className: GameBuilding
   - hash:
       serializedVersion: 2
@@ -839,6 +838,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: ProbeTouchupVolume
+  - hash:
+      serializedVersion: 2
+      Hash: f1e039d0ecaeff6872cd037d3c6314a5
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: BoxGroupTest
+  - hash:
+      serializedVersion: 2
+      Hash: bc9627cd7a922488409b4195a4d515a6
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ValidateInputTest
   - hash:
       serializedVersion: 2
       Hash: 33656f83bb0079184b2206a69690ec46
@@ -889,13 +900,13 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 033b37d5de27830562bf7700f9e0ba92
+      Hash: 5e890dcce28581e075f65bf3ac5a4a24
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Building
+    namespaceName: MyShelterWin64.Game.Building
     className: GameBuildingSO
   - hash:
       serializedVersion: 2
-      Hash: 864e429bd5f0b7e5b38078e18cbbe800
+      Hash: 1961356a3848a39ce96d402ad3264d1b
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.Game.Manager
     className: GameManager
@@ -925,16 +936,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 755ec4bae2b3b16276059d8895b977ea
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveSorting
-  - hash:
-      serializedVersion: 2
       Hash: dbe4f05d59170430398f6453d7253fe5
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerWidget
+  - hash:
+      serializedVersion: 2
+      Hash: fb6af743687b621fbd6b51261b6fe316
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: RequiredTest
   - hash:
       serializedVersion: 2
       Hash: 6ddf94363c6ce4b02d9fdd51290cb0f9
@@ -943,9 +954,9 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 19af3939a34fa032f59d90576cdb065a
+      Hash: 6b4316b27f4e1c01a60f1fe6de131725
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Economy
+    namespaceName: MyShelterWin64.Game.Economy
     className: GameEconomyVitalSO
   - hash:
       serializedVersion: 2
@@ -955,28 +966,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 8994247ddacb8f8856e38bfaae72d2fe
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveResolution
+      Hash: af69c5e9fff41a00e4e276898238159f
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.AI
+    className: NPCScriptable
   - hash:
       serializedVersion: 2
-      Hash: fb971d2d007ce75f89cfd2bdd764abce
-    assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
-    className: NPCScriptable
+      Hash: e1316bceccdc3c5bd613cc3f468fa70d
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowAssetPreviewTest
   - hash:
       serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: b2afee545f7607bd2d2b5a2ae227d428
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveShadowDistance
   - hash:
       serializedVersion: 2
       Hash: 28fd3d045acc780719a17f02073eb448
@@ -1003,12 +1008,6 @@ ScriptsOnlyBuild:
     className: GameEntityDatabaseSO
   - hash:
       serializedVersion: 2
-      Hash: 07f6b7f433c8738108c47c5dd5c7c7cd
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptivePhysics
-  - hash:
-      serializedVersion: 2
       Hash: bf40c7a9dc15bc219687c9838aa9b41f
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1021,9 +1020,15 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIndirectFloatField
   - hash:
       serializedVersion: 2
-      Hash: bfe3e45858038efa7936eba603e9049e
+      Hash: 0d37d412fd563c3868dbc51aee4fef98
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: EnumFlagsTest
+  - hash:
+      serializedVersion: 2
+      Hash: d7fe09d819edfc4a4c98bdd47f5836fd
     assemblyName: Assembly-CSharp
-    namespaceName: 
+    namespaceName: MyShelterWin64.Game.Player
     className: PlayerHUDCtrl
   - hash:
       serializedVersion: 2
@@ -1033,10 +1038,10 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerBitField
   - hash:
       serializedVersion: 2
-      Hash: c77e7f80798b9c346f7ef512d203b0e5
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveBatching
+      Hash: 4156f8fa315b011ff80eba41f668d64b
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: HorizontalLineTest
   - hash:
       serializedVersion: 2
       Hash: 9104447b683bf70406fa01f12ecb564a
@@ -1063,6 +1068,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 75f43d219343e08c80ca72458a3a36d4
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: InfoBoxTest
+  - hash:
+      serializedVersion: 2
       Hash: 68f2cb287af2eee1f639824485a3402b
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -1073,12 +1084,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: aa6623e19c6d8364fa7ccbec13f130b4
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveFramerate
   - hash:
       serializedVersion: 2
       Hash: ea5e0cb2f62c5bafc3dfb7bcdc9595e1
@@ -1111,12 +1116,6 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerColor
   - hash:
       serializedVersion: 2
-      Hash: 1534ee51e05e98ee8623a7ff6cd75ae9
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveShadowQuality
-  - hash:
-      serializedVersion: 2
       Hash: 9f355e210e7950e47ad1391c7681435b
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1127,6 +1126,12 @@ ScriptsOnlyBuild:
     assemblyName: OccaSoftware.SuperSimpleSkybox.Runtime
     namespaceName: OccaSoftware.SuperSimpleSkybox.Runtime
     className: MoonStatic
+  - hash:
+      serializedVersion: 2
+      Hash: 150fa11e6fba861ecfd7119c47a07012
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ExpandableTest
   - hash:
       serializedVersion: 2
       Hash: 20a120e55ad3ab65556328d5fd8309dd
@@ -1147,6 +1152,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerRow
   - hash:
       serializedVersion: 2
+      Hash: a39523866ea5739ad1c334a1cfc1578e
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ButtonTest
+  - hash:
+      serializedVersion: 2
       Hash: 47247e29ff0f727264f83a7f754b229c
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
@@ -1159,9 +1170,15 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 8655cbbf7c8eedb02ec03c4e9a13d9de
+      Hash: c02da3f79cfdf7ba01b6553f860a96cf
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: DisableIfTest
+  - hash:
+      serializedVersion: 2
+      Hash: 4b3433cce64fc76b924094d2906b9555
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Economy
+    namespaceName: MyShelterWin64.Game.Economy
     className: GameEconomyGoldSO
   - hash:
       serializedVersion: 2
@@ -1187,6 +1204,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 281448595e4aea92d1f6eb30a951b6f4
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _NaughtyComponent
   - hash:
       serializedVersion: 2
       Hash: cf32d98954e63b8e30e9334b152e9b8e
@@ -1237,10 +1260,22 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 08b3033917c5016c6759c612e2e2dbc2
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: TagTest
+  - hash:
+      serializedVersion: 2
       Hash: afb7b65d28d5a7423e69a1b076be0064
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 0bd2baafaa35c7b73edd73e01e081f40
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: DropdownTest
   - hash:
       serializedVersion: 2
       Hash: 5382156409d7c462c67822a5ee8d6c85
@@ -1255,12 +1290,6 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: d5125db89c6b164bbac723664bbc5ee6
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptivePerformanceManager
-  - hash:
-      serializedVersion: 2
       Hash: 830c3b545f6e6ee60a4cebab90516f2c
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1273,16 +1302,28 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 1a46629d5ec5009883efbe630a6b52e3
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveLayerCulling
+      Hash: f8cda422f9708bc31ca90f8d39bc7d13
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _TestScriptableObjectB
+  - hash:
+      serializedVersion: 2
+      Hash: ec77028acbabfd35f109834da67ce1a6
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowNativePropertyTest
   - hash:
       serializedVersion: 2
       Hash: 5ebc58ec194dd44630b25fcc270ad4af
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: fd0c11e0011deb7e45ad58418ae8aec8
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ReadOnlyTest
   - hash:
       serializedVersion: 2
       Hash: fb79e95da8891fc7ac6c36ca6967af23
@@ -1315,16 +1356,16 @@ ScriptsOnlyBuild:
     className: SunStatic
   - hash:
       serializedVersion: 2
-      Hash: b0c8a1b11b1433071a20fd6e4c73a5f3
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveViewDistance
-  - hash:
-      serializedVersion: 2
       Hash: b747f5d40674055dd70e18552f1b0447
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: a10560e0480d1331c54e3306e18c7d03
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: AnimatorParamTest
   - hash:
       serializedVersion: 2
       Hash: 2cc5af0f17cef9c717df88c8c7e4c9aa
@@ -1345,6 +1386,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerPersistentCanvas
   - hash:
       serializedVersion: 2
+      Hash: db077ef3a37fbdf326d40fb5a274d6b8
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ReorderableListTest
+  - hash:
+      serializedVersion: 2
       Hash: 185e7bacfbbc5defefa609c70f7ff4ce
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1363,16 +1410,10 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 710ae1c9b325f59a36007abceb039638
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveLOD
-  - hash:
-      serializedVersion: 2
-      Hash: eb0596742065f51f7812a64eb77d16c3
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: IAdaptivePerformanceSettings
+      Hash: 94a1493fbe1dcde97c755df3570ad859
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowNonSerializedFieldTest
   - hash:
       serializedVersion: 2
       Hash: 042785b832afb73fd0585521aa7baf43
@@ -1387,16 +1428,16 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
+      Hash: 8055b0dc318546409a7fc5d6d0083990
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: EnableIfTest
+  - hash:
+      serializedVersion: 2
       Hash: fe0a072dbdcbca34d5003c5299de3aaf
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: SceneRenderPipeline
-  - hash:
-      serializedVersion: 2
-      Hash: 32907f2a37539cbf6b4bf636831ef264
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveMSAA
   - hash:
       serializedVersion: 2
       Hash: c933b590b3badb5918fa01e73cd5cc0c
@@ -1405,16 +1446,22 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 67188d34689c9475455862bb822a1cc6
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptivePerformanceManagerSettings
+      Hash: 08e22563095da89ba898b282ebdfcdaa
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Player
+    className: PlayerCameraBhvr
   - hash:
       serializedVersion: 2
-      Hash: c7ab73c61dc67bc4475fb0ba53055133
+      Hash: cd7e84625f75adf5b9a5cb2ad5392479
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: LayerTest
+  - hash:
+      serializedVersion: 2
+      Hash: 27f3bcbe6b2f615ad4fd27172e1d57ce
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Player
-    className: PlayerCameraBhvr
+    namespaceName: MyShelterWin64.Game.Manager
+    className: GameEntityPoolManager
   - hash:
       serializedVersion: 2
       Hash: e7e95903ca66d58e1a7cbd71f824e16d
@@ -1435,10 +1482,28 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerButton
   - hash:
       serializedVersion: 2
-      Hash: 6f16749f5e54c509f5467810d449764c
+      Hash: 9e28546ae252acc281e19c642e646c80
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowIfTest
+  - hash:
+      serializedVersion: 2
+      Hash: c4a1ffea3b7c1eb32295a2b5571d3227
     assemblyName: Assembly-CSharp
     namespaceName: MyShelterWin64.Game
     className: Entity
+  - hash:
+      serializedVersion: 2
+      Hash: 061eea5e5b990e61b9cc6e4751e277dc
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: LabelTest
+  - hash:
+      serializedVersion: 2
+      Hash: 00a68f05c3967ef4ef3740e10b6dd2fd
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ProgressBarTest
   - hash:
       serializedVersion: 2
       Hash: 9078325c2a6f6a2d9612ade897511860
@@ -1453,16 +1518,16 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 86fccac03a52493443c21b496b1bd0e2
-    assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Game
-    className: GameEntityManager
+      Hash: b99d5e315638fa37d01f021575d76810
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: InputAxisTest
   - hash:
       serializedVersion: 2
-      Hash: 9126d0be22d964159df51d6d53b879a9
-    assemblyName: Unity.AdaptivePerformance
-    namespaceName: UnityEngine.AdaptivePerformance
-    className: AdaptiveTransparency
+      Hash: e2fc70fa1631304e9b113d4eb8a406ae
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Manager
+    className: GameEntityManager
   - hash:
       serializedVersion: 2
       Hash: 1362033cd491d66ad3cc206af29cc0de
@@ -1471,9 +1536,9 @@ ScriptsOnlyBuild:
     className: Volume
   - hash:
       serializedVersion: 2
-      Hash: eb1986dd47c5cdb127de8f33d8327e3b
+      Hash: 14493a73ef78163bbbf7bbe4454fa15a
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
+    namespaceName: MyShelterWin64.Game.AI
     className: AIState
   - hash:
       serializedVersion: 2
@@ -1489,10 +1554,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFoldout
   - hash:
       serializedVersion: 2
-      Hash: b9d268aaeef3f307a570d4cf3aedaee5
+      Hash: c77223d488d50704e09fd1e04374947e
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
+    namespaceName: MyShelterWin64.Game.AI
     className: NPC
+  - hash:
+      serializedVersion: 2
+      Hash: 34bffb3ad451ae773b811f23640979f0
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: CurveRangeTest
   - hash:
       serializedVersion: 2
       Hash: 85364183c045f8a7724b3d150fe20423
@@ -1507,15 +1578,15 @@ ScriptsOnlyBuild:
     className: SetStarRotation
   - hash:
       serializedVersion: 2
-      Hash: 6dedfc8958c71722aeea68b51a489326
+      Hash: 41b9e5ae052c62403b90d235d5dcc34e
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Building
+    namespaceName: MyShelterWin64.Game.Manager
     className: GameBuildingManager
   - hash:
       serializedVersion: 2
-      Hash: 31756ced3e1a65bd249fcd6575ae2768
+      Hash: 9d4bc90e38eb869fab5b7d9ee49ce1fc
     assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.AI
+    namespaceName: MyShelterWin64.Game.AI
     className: WanderStateAction
   - hash:
       serializedVersion: 2
@@ -1523,6 +1594,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: d620514b8bbc6ea20cf64eb31e65accd
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Pooling
+    className: GameEntityPoolSO
   - hash:
       serializedVersion: 2
       Hash: 0ed3d33924e337172c08d1b127cadd70
@@ -1537,6 +1614,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 54e799d6baf4a9c0185527d9f7f7da5a
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: SceneTest
+  - hash:
+      serializedVersion: 2
       Hash: 8dc40a01667ca02b3354a4e7a61be082
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1549,18 +1632,30 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 6cf47bced8ac20b49ed69cabfeec707f
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: HideIfTest
+  - hash:
+      serializedVersion: 2
+      Hash: 8f6b9391972a60de2deb371f87acccaa
+    assemblyName: Assembly-CSharp
+    namespaceName: MyShelterWin64.Game.Building
+    className: BuildingPlacementCtrl
+  - hash:
+      serializedVersion: 2
       Hash: 8a2f78c25d5e92eb97ee5544a162a2e9
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
     className: NavMeshLink
   - hash:
       serializedVersion: 2
-      Hash: f9fe9d7c604e28dd247e77b3c40e9e3b
-    assemblyName: Assembly-CSharp
-    namespaceName: MyShelterWin64.Game.Building
-    className: BuildingPlacementCtrl
+      Hash: 4ddc6f279dda7baa5a21ec9f8a14217b
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: FoldoutTest
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_buildingsystem/My
+  playerPath: C:/Users/enzor/Dev/PC/pc3D.unity2022.myshelter.windowsgame/builds_myshelter_windows/10_05_24/testbed_build_test_npcstatemachine2/My
     Shelter Beta.exe
